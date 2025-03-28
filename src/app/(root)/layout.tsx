@@ -18,7 +18,7 @@ export const metadata: Metadata = {
         siteName: "もいずる",
 
         images: [{
-            url: "https://moiz.lu/moizlu.png",
+            url: "https://moiz.lu/ogp.png",
             width: 1200,
             height: 630,
             alt: "もいずる"
