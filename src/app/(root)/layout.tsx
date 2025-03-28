@@ -18,7 +18,7 @@ export const metadata: Metadata = {
         siteName: "もいずる",
 
         images: [{
-            url: "https://moiz.lu/logo/moizlu.svg",
+            url: "https://moiz.lu/moizlu.png",
             width: 1000,
             height: 1000,
             alt: "もいずる"
