@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, M_PLUS_1_Code } from "next/font/google";
+import { M_PLUS_1_Code } from "next/font/google";
 import "../globals.css";
 
 const mPlus = M_PLUS_1_Code({
