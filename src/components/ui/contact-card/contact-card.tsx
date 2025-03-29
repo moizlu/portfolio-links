@@ -26,7 +26,7 @@ const ContactCard = ({ iconPath, serviceName, userName, url = "#", isMailAddress
                     <Image src={iconPath} width={25} height={25} alt="サービスの画像"/>
                     <div className="flex flex-col items-start m-5">
                         <p className="text-2xl font-bold">{serviceName}</p>
-                        <p className="text-[11px]">{(isMailAddress) ? "右のボタンを押してください" : userName}</p>
+                        <p className="text-[11px]">{(isMailAddress) ? "横のボタンでコピー" : userName}</p>
                     </div>
                 </div>
             </a>
