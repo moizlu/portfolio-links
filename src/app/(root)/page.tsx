@@ -11,10 +11,7 @@ const generateMailAddress = (userName: string, sld: string, tld: string) => {
 const Page = () => {
     return (
         <div className="flex flex-col justify-center items-center h-screen">
-            <div className="flex justify-center items-center">
-                <Image src="/logo/moizlu.svg" width={100} height={100} alt="ロゴ" className="drop-shadow-lg ml-12" />
-                <CopyButton userName="moizlu" url="https://moiz.lu" isMailAddress={false} className="m-2"/>
-            </div>
+            <Image src="/logo/moizlu.svg" width={100} height={100} alt="ロゴ" className="drop-shadow-lg" />
             <p className="text-3xl m-3 drop-shadow-md">もいずる(moizlu)</p>
 
             <ContactCard iconPath="/logo/moizlu.svg" serviceName="Portfolio" userName="制作中" url="https://moizlu.com" />
@@ -25,7 +22,20 @@ const Page = () => {
             <ContactCard iconPath="/logo/x.svg" serviceName="X(Twitter)" userName="@moizlu" url="https://x.com/moizlu" />
             <ContactCard iconPath="/logo/youtube.svg" serviceName="YouTube" userName="@moizlu" url="https://www.youtube.com/@moizlu" />
             <ContactCard iconPath="/logo/instagram.svg" serviceName="Instagram" userName="moizlu" url="https://www.instagram.com/moizlu" />
-            <ContactCard iconPath="/logo/steam.svg" serviceName="Steam" userName="moizlu" url="https://steamcommunity.com/id/moizlu"/>
+            <ContactCard iconPath="/logo/steam.svg" serviceName="Steam" userName="moizlu" url="https://steamcommunity.com/id/moizlu" />
+
+            <div className="h-20 w-66 bg-gray-800 p-3 m-2
+                            flex flex-col items-center justify-center rounded-2xl
+                            shadow-md shadow-gray-600
+                            ">
+                <div className="flex items-center justify-center">
+                    <Image src="/home-qr.svg" width={70} height={70} alt="QRコード" />
+                    <div className="flex items-center justify-center">
+                        <p>https://moiz.lu</p>
+                        <CopyButton userName="moizlu" url="https://moiz.lu" isMailAddress={false} className="m-2"/>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }
