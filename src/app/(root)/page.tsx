@@ -1,4 +1,5 @@
 import ContactCard from "@/components/ui/contact-card";
+import CopyButton from "@/components/ui/copy-button";
 import Image from "next/image";
 
 const generateMailAddress = (userName: string, sld: string, tld: string) => {
@@ -10,7 +11,10 @@ const generateMailAddress = (userName: string, sld: string, tld: string) => {
 const Page = () => {
     return (
         <div className="flex flex-col justify-center items-center h-screen">
-            <Image src="/logo/moizlu.svg" width={100} height={100} alt="サービスの画像" className="drop-shadow-lg"/>
+            <div className="flex justify-center items-center">
+                <Image src="/logo/moizlu.svg" width={100} height={100} alt="ロゴ" className="drop-shadow-lg ml-10" />
+                <CopyButton userName="moizlu" url="https://moiz.lu" isMailAddress={false}/>
+            </div>
             <p className="text-3xl m-3 drop-shadow-md">もいずる(moizlu)</p>
 
             <ContactCard iconPath="/logo/moizlu-white.svg" serviceName="Portfolio" userName="制作中" url="https://moizlu.com" />
@@ -20,7 +24,7 @@ const Page = () => {
             <ContactCard iconPath="/logo/github.svg" serviceName="GitHub" userName="@moizlu" url="https://github.com/moizlu"/>
             <ContactCard iconPath="/logo/discord.svg" serviceName="Discord" userName="@moizlu"/>
             <ContactCard iconPath="/logo/steam.svg" serviceName="Steam" userName="moizlu" url="https://steamcommunity.com/id/moizlu"/>
-            <ContactCard iconPath="/logo/mail.svg" serviceName="Mail" userName={generateMailAddress("contact", "moizlu", "com")} />
+            <ContactCard iconPath="/logo/mail.svg" serviceName="Mail" userName={generateMailAddress("contact", "moizlu", "com")} isMailAddress={true} />
         </div>
     );
 }
