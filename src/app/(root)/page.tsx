@@ -17,7 +17,7 @@ const Page = () => {
             </div>
             <p className="text-3xl m-3 drop-shadow-md">もいずる(moizlu)</p>
 
-            <ContactCard iconPath="/logo/moizlu-white.svg" serviceName="Portfolio" userName="制作中" url="https://moizlu.com" />
+            <ContactCard iconPath="/logo/moizlu.svg" serviceName="Portfolio" userName="制作中" url="https://moizlu.com" />
             <ContactCard iconPath="/logo/mail.svg" serviceName="Mail" userName={generateMailAddress("contact", "moizlu", "com")} isMailAddress={true} />
             <ContactCard iconPath="/logo/discord.svg" serviceName="Discord" userName="moizlu"/>
             <ContactCard iconPath="/logo/github.svg" serviceName="GitHub" userName="moizlu" url="https://github.com/moizlu" />
