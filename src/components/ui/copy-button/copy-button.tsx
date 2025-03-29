@@ -19,7 +19,7 @@ const CopyButton = ({ userName, url, isMailAddress }: Props) => {
             }
 
             navigator.clipboard.writeText(copyText);
-        } catch (error) {
+        } catch {
             alert("コピーに失敗しました。やり直してみてください。");
         }
 

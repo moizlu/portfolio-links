@@ -24,6 +24,7 @@ const Page = () => {
             <ContactCard iconPath="/logo/github.svg" serviceName="GitHub" userName="@moizlu" url="https://github.com/moizlu"/>
             <ContactCard iconPath="/logo/discord.svg" serviceName="Discord" userName="@moizlu"/>
             <ContactCard iconPath="/logo/steam.svg" serviceName="Steam" userName="moizlu" url="https://steamcommunity.com/id/moizlu"/>
+            <ContactCard iconPath="/logo/pixiv.svg" serviceName="pixiv" userName="moizlu" url="https://pixiv.me/moizlu"/>
             <ContactCard iconPath="/logo/mail.svg" serviceName="Mail" userName={generateMailAddress("contact", "moizlu", "com")} isMailAddress={true} />
         </div>
     );
