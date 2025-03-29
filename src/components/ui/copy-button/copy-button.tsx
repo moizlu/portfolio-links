@@ -6,9 +6,10 @@ interface Props {
     userName: React.ReactNode;
     url: string;
     isMailAddress: boolean;
+    className?: string;
 }
 
-const CopyButton = ({ userName, url, isMailAddress }: Props) => {
+const CopyButton = ({ userName, url, isMailAddress, className="" }: Props) => {
     const handleCopy = () => {
         try {
             let copyText = (url === "#") ? userName?.toString() ?? "" : url;
@@ -26,12 +27,13 @@ const CopyButton = ({ userName, url, isMailAddress }: Props) => {
     }
 
     return (
-        <div className="h-10 w-10 rounded-full
+        <div className={`${className}
+                        h-10 w-10 rounded-full
                         transition-all duration-300
                         flex items-center justify-center
                         bg-gray-800
                         drop-shadow-lg active:drop-shadow-none
-                        active:bg-gray-500"
+                        active:bg-gray-500`}
             >
             <button type="button" title="コピー" className="">
                 <Image src="/icons/copy.svg" width={20} height={20} alt="コピー" onClick={handleCopy} className="m-2"/>

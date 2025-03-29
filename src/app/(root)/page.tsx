@@ -12,8 +12,8 @@ const Page = () => {
     return (
         <div className="flex flex-col justify-center items-center h-screen">
             <div className="flex justify-center items-center">
-                <Image src="/logo/moizlu.svg" width={100} height={100} alt="ロゴ" className="drop-shadow-lg ml-10" />
-                <CopyButton userName="moizlu" url="https://moiz.lu" isMailAddress={false}/>
+                <Image src="/logo/moizlu.svg" width={100} height={100} alt="ロゴ" className="drop-shadow-lg ml-12" />
+                <CopyButton userName="moizlu" url="https://moiz.lu" isMailAddress={false} className="m-2"/>
             </div>
             <p className="text-3xl m-3 drop-shadow-md">もいずる(moizlu)</p>
 
