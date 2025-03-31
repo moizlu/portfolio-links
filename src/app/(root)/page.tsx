@@ -10,7 +10,7 @@ const generateMailAddress = (userName: string, sld: string, tld: string) => {
 
 const Page = () => {
     return (
-        <div className="flex flex-col justify-center items-center h-max">
+        <div className="flex flex-col justify-center items-center min-h-screen">
             <Image src="/logo/moizlu.svg" width={100} height={100} alt="ロゴ" className="drop-shadow-lg mt-2" />
             <p className="text-3xl m-3 drop-shadow-md">もいずる(moizlu)</p>
 
