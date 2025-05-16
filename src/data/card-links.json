@@ -1,0 +1,57 @@
+[
+    {
+		"iconPath": "/logo/moizlu.svg",
+		"serviceName": "Portfolio",
+		"userName": "制作中",
+		"url": "https://moizlu.com/"
+	},
+	{
+		"iconPath": "/logo/mail.svg",
+		"serviceName": "Mail",
+		"userName": "[非表示]",
+		"url": ""
+	},
+	{
+		"iconPath": "/logo/discord.svg",
+		"serviceName": "Discord",
+		"userName": "moizlu",
+		"url": "https://discord.com/users/607472928669302784/"
+	},
+	{
+		"iconPath": "/logo/github.svg",
+		"serviceName": "GitHub",
+		"userName": "moizlu",
+		"url": "https://github.com/moizlu/"
+	},
+	{
+		"iconPath": "/logo/pixiv.svg",
+		"serviceName": "pixiv",
+		"userName": "moizlu",
+		"url": "https://pixiv.me/moizlu/"
+	},
+	{
+		"iconPath": "/logo/x.svg",
+		"serviceName": "X(Twitter)",
+		"userName": "@moizlu",
+		"url": "https://x.com/moizlu/"
+	},
+	{
+		"iconPath": "/logo/youtube.svg",
+		"serviceName": "YouTube",
+		"userName": "@moizlu",
+		"url": "https://www.youtube.com/@moizlu/"
+	},
+	{
+		"iconPath": "/logo/instagram.svg",
+		"serviceName": "Instagram",
+		"userName": "moizlu",
+		"url": "https://www.instagram.com/moizlu/"
+	},
+	{
+		"iconPath": "/logo/steam.svg",
+		"serviceName": "Steam",
+		"userName": "moizlu",
+		"url": "https://steamcommunity.com/id/moizlu/"
+	}
+
+]

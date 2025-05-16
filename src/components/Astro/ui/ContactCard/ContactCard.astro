@@ -1,0 +1,41 @@
+---
+import clsx from "clsx";
+
+import CopyButton from "../../../Svelte/ui//CopyButton/CopyButton.svelte";
+
+export interface CardInfo {
+    iconPath:    string;
+    serviceName: string;
+    userName:    string;
+    url:         string | (() => string);
+}
+
+interface Props extends CardInfo {
+    size: number;
+}
+
+let { iconPath, serviceName, userName, url, size=70 }: Props = Astro.props;
+
+if (typeof url === "function") {
+    url = url();
+}
+
+let viewUrl = url.startsWith("http") ? url : '#';
+---
+
+<div class="flex justify-center items-center m-2">
+    <a href={viewUrl} target="_blank" class={`${(viewUrl === '#') ? "pointer-events-none" : ""}`}>
+        <div class="flex justify-start items-center
+                    w-50
+                    bg-[#474747] rounded-2xl
+                    shadow-black shadow-md
+        ">
+            <img src={iconPath} alt=`${serviceName}'s logo` width={size} class="m-2">
+            <div class="flex flex-col">
+                <p class="m-2 text-2xl">{serviceName}</p>
+                <p class="mx-2 mb-2 text-md">{userName}</p>
+            </div>
+        </div>
+    </a>
+    <CopyButton url={url} size={20} client:load />
+</div>

@@ -1,0 +1,42 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import type { CardInfo } from "../components/Astro/ui/ContactCard/ContactCard.astro";
+
+import ContactCard from "../components/Astro/ui/ContactCard/ContactCard.astro";
+import ShareCard from "../components/Svelte/ui/ShareButton/ShareButton.svelte";
+
+import cardLinks from "../data/card-links.json";
+
+const generateEmailAddress = (user: string, sld: string, tld: string): (() => string) => {
+	return () => {
+		return `${user}@${sld}.${tld}`;
+	};
+};
+
+const cards: CardInfo[] = cardLinks;
+
+cards.map((card) => {
+	if (card.serviceName === "Mail") {
+		card.url = generateEmailAddress("contact", "moizlu", "com");
+	}
+});
+---
+
+<Layout title="もいずる | リンク集" faviconPath="/favicon.svg">
+	<div class="flex flex-col items-center justify-center
+				min-h-screen
+	">
+		<img src="/logo/moizlu.svg" alt="moizlu's logo" width={200} class="m-2 drop-shadow-md" />
+
+		<div class="flex items-center justify-center">
+			<div class="flex flex-col items-center justify-center">
+				<p class="m-1 text-5xl">もいずる</p>
+				<p class="m-1 text-3xl">moizlu</p>
+			</div>
+			<ShareCard shareButtonUrl="/icons/share.svg" alt="share button" size={50} client:load />
+		</div>
+
+		{cards.map((card) => <ContactCard {...card} size={50} />)}
+	</div>
+</Layout>
