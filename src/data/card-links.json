@@ -15,43 +15,43 @@
 		"iconPath": "/logo/discord.svg",
 		"serviceName": "Discord",
 		"userName": "moizlu",
-		"url": "https://link.moiz.lu/discord"
+		"url": "https://moiz.lu/discord"
 	},
 	{
 		"iconPath": "/logo/github.svg",
 		"serviceName": "GitHub",
 		"userName": "moizlu",
-		"url": "https://link.moiz.lu/github"
+		"url": "https://moiz.lu/github"
 	},
 	{
 		"iconPath": "/logo/pixiv.svg",
 		"serviceName": "pixiv",
 		"userName": "moizlu",
-		"url": "https://link.moiz.lu/pixiv"
+		"url": "https://moiz.lu/pixiv"
 	},
 	{
 		"iconPath": "/logo/x.svg",
 		"serviceName": "X(Twitter)",
 		"userName": "@moizlu",
-		"url": "https://link.moiz.lu/x"
+		"url": "https://moiz.lu/x"
 	},
 	{
 		"iconPath": "/logo/youtube.svg",
 		"serviceName": "YouTube",
 		"userName": "@moizlu",
-		"url": "https://link.moiz.lu/youtube"
+		"url": "https://moiz.lu/youtube"
 	},
 	{
 		"iconPath": "/logo/instagram.svg",
 		"serviceName": "Instagram",
 		"userName": "moizlu",
-		"url": "https://link.moiz.lu/instagram"
+		"url": "https://moiz.lu/instagram"
 	},
 	{
 		"iconPath": "/logo/steam.svg",
 		"serviceName": "Steam",
 		"userName": "moizlu",
-		"url": "https://link.moiz.lu/steam"
+		"url": "https://moiz.lu/steam"
 	}
 
 ]

@@ -19,5 +19,17 @@ export default defineConfig({
     plugins: [tailwindcss()]
   },
 
-  integrations: [svelte()]
+  integrations: [svelte()],
+
+  redirects: {
+    "/": "https://moiz.lu",
+    "discord": "https://discord.com/users/607472928669302784",
+    "github": "https://github.com/moizlu",
+    "pixiv": "https://pixiv.me/moizlu",
+    "x": "https://x.com/moizlu",
+    "twitter": "https://x.com/moizlu",
+    "youtube": "https://www.youtube.com/@moizlu",
+    "instagram": "https://www.instagram.com/moizlu",
+    "steam": "https://steamcommunity.com/id/moizlu/"
+  }
 });
