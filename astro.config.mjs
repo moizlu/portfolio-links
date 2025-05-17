@@ -22,7 +22,6 @@ export default defineConfig({
   integrations: [svelte()],
 
   redirects: {
-    "/": "https://moiz.lu",
     "discord": "https://discord.com/users/607472928669302784",
     "github": "https://github.com/moizlu",
     "pixiv": "https://pixiv.me/moizlu",
