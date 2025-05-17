@@ -15,43 +15,43 @@
 		"iconPath": "/logo/discord.svg",
 		"serviceName": "Discord",
 		"userName": "moizlu",
-		"url": "https://discord.com/users/607472928669302784/"
+		"url": "https://link.moiz.lu/discord"
 	},
 	{
 		"iconPath": "/logo/github.svg",
 		"serviceName": "GitHub",
 		"userName": "moizlu",
-		"url": "https://github.com/moizlu/"
+		"url": "https://link.moiz.lu/github"
 	},
 	{
 		"iconPath": "/logo/pixiv.svg",
 		"serviceName": "pixiv",
 		"userName": "moizlu",
-		"url": "https://pixiv.me/moizlu/"
+		"url": "https://link.moiz.lu/pixiv"
 	},
 	{
 		"iconPath": "/logo/x.svg",
 		"serviceName": "X(Twitter)",
 		"userName": "@moizlu",
-		"url": "https://x.com/moizlu/"
+		"url": "https://link.moiz.lu/x"
 	},
 	{
 		"iconPath": "/logo/youtube.svg",
 		"serviceName": "YouTube",
 		"userName": "@moizlu",
-		"url": "https://www.youtube.com/@moizlu/"
+		"url": "https://link.moiz.lu/youtube"
 	},
 	{
 		"iconPath": "/logo/instagram.svg",
 		"serviceName": "Instagram",
 		"userName": "moizlu",
-		"url": "https://www.instagram.com/moizlu/"
+		"url": "https://link.moiz.lu/instagram"
 	},
 	{
 		"iconPath": "/logo/steam.svg",
 		"serviceName": "Steam",
 		"userName": "moizlu",
-		"url": "https://steamcommunity.com/id/moizlu/"
+		"url": "https://link.moiz.lu/steam"
 	}
 
 ]
