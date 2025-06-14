@@ -39,7 +39,7 @@
         {@render children()}
     </button>
 {/if} -->
-<div class={[`fixed top-0 left-0 w-full h-full
+<div class={[`fixed top-0 left-0 w-full h-full z-10
               transition-opacity duration-200
               flex items-center justify-center
               bg-zinc-50 dark:bg-zinc-900 blur-2xl
@@ -47,7 +47,7 @@
 </div>
 
 {#if isOpen}
-    <button class="fixed top-0 left-0 w-full h-full
+    <button class="fixed top-0 left-0 w-full h-full z-10
                    transition-opacity duration-200
                    flex items-center justify-center"
         bind:this={backgroundElement}
