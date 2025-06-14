@@ -1,8 +1,11 @@
 <script lang="ts">
+  import type { Snippet } from 'svelte';
+
     interface Props {
         isOpen: boolean;
-        children?: any;
+        children: Snippet;
     }
+
     let { isOpen = $bindable(), children }: Props = $props();
 
     let backgroundElement: HTMLButtonElement | undefined = $state(undefined);
@@ -16,21 +19,39 @@
     };
 </script>
 
-<div class={[`transition-opacity duration-200
+<!-- `#if`ブロックに入れるといきなりDOMに追加されるのでアニメーションが見えない -->
+<!-- <div class={[`transition-opacity duration-200
             fixed top-0 left-0 w-full h-full
             flex items-center justify-center
-            bg-gray-900 blur-2xl
-            `, isOpen ? "opacity-75" : "opacity-0 pointer-events-none"]}
+            bg-zinc-900 blur-2xl
+            `, (isOpen) ? "opacity-75" : "opacity-0 pointer-events-none"]}
     >
 </div>
 
-{#if children && isOpen}
+{#if isOpen}
     <button class="transition-opacity duration-200
                 fixed top-0 left-0 w-full h-full
                 flex items-center justify-center
                 "
             bind:this={backgroundElement}
             onclick={onclick}
+    >
+        {@render children()}
+    </button>
+{/if} -->
+<div class={[`fixed top-0 left-0 w-full h-full
+              transition-opacity duration-200
+              flex items-center justify-center
+              bg-zinc-50 dark:bg-zinc-900 blur-2xl
+`, (isOpen) ? "opacity-75" : "opacity-0 pointer-events-none"]}>
+</div>
+
+{#if isOpen}
+    <button class="fixed top-0 left-0 w-full h-full
+                   transition-opacity duration-200
+                   flex items-center justify-center"
+        bind:this={backgroundElement}
+        onclick={onclick}
     >
         {@render children()}
     </button>

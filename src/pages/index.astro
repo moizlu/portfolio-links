@@ -1,12 +1,12 @@
 ---
+import type { CardInfo } from '../components/Astro/ui/ContactCard/ContactCard.astro';
+
+import ShareButton from '../components/Svelte/ui/ShareButton/ShareButton.svelte';
+import ContactCard from '../components/Astro/ui/ContactCard/ContactCard.astro';
+import cardLinksData from '../data/card-links.json';
 import Layout from "../layouts/Layout.astro";
 
-import type { CardInfo } from "../components/Astro/ui/ContactCard/ContactCard.astro";
-
-import ContactCard from "../components/Astro/ui/ContactCard/ContactCard.astro";
-import ShareCard from "../components/Svelte/ui/ShareButton/ShareButton.svelte";
-
-import cardLinks from "../data/card-links.json";
+const cardLinks = cardLinksData as CardInfo[];
 
 const generateEmailAddress = (user: string, sld: string, tld: string): (() => string) => {
 	return () => {
@@ -14,9 +14,7 @@ const generateEmailAddress = (user: string, sld: string, tld: string): (() => st
 	};
 };
 
-const cards: CardInfo[] = cardLinks;
-
-cards.map((card) => {
+cardLinks.map((card) => {
 	if (card.serviceName === "Mail") {
 		card.url = generateEmailAddress("contact", "moizlu", "com");
 	}
@@ -24,19 +22,15 @@ cards.map((card) => {
 ---
 
 <Layout title="もいずる | リンク集" faviconPath="/favicon.svg">
-	<div class="flex flex-col items-center justify-center
-				min-h-screen
-	">
-		<img src="/logo/moizlu.svg" alt="moizlu's logo" width={200} class="m-2 drop-shadow-md" />
+	<div class="flex flex-col justify-center items-center my-10">
+		<img src="/logo/light/moizlu.svg" alt="logo" width={300} class="m-5 drop-shadow-zinc-800 drop-shadow-md" />
+		<p class="m-5 text-6xl">もいずる</p>
+		<p class="m-2 text-5xl">moizlu</p>
 
-		<div class="flex items-center justify-center">
-			<div class="flex flex-col items-center justify-center">
-				<p class="m-1 text-5xl">もいずる</p>
-				<p class="m-1 text-3xl">moizlu</p>
-			</div>
-			<ShareCard shareButtonUrl="/icons/share.svg" alt="share button" size={50} client:load />
+		<ShareButton client:load />
+
+		<div class="flex flex-col justify-center items-stretch gap-1 w-90">
+			{cardLinks.map((card) => <ContactCard {...card} />)}
 		</div>
-
-		{cards.map((card) => <ContactCard {...card} size={50} />)}
 	</div>
 </Layout>
