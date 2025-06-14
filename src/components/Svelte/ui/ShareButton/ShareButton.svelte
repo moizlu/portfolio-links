@@ -2,42 +2,33 @@
     import Modal from "../Modal/Modal.svelte";
     import CopyButton from "../CopyButton/CopyButton.svelte";
 
-    interface Props {
-        shareButtonUrl: string;
-        alt: string;
-        size?: number;
-    }
-    const { shareButtonUrl, alt, size = 50 }: Props = $props();
-
-    let isModalOpen: boolean = $state(false);
+    let isOpen: boolean = $state(false);
 
     const onclick = () => {
-        isModalOpen = true;
-    };
+        isOpen = !isOpen;
+    }
 </script>
 
-<button class="bg-[#474747] rounded-full
-            transition-all duration-500 active:bg-gray-200
-            shadow-gray-800 shadow-md
-            m-2 p-2
-            "
-        {onclick}
->
-    <img src={shareButtonUrl} {alt} width={size} height={size} />
+<!-- 共有ボタン -->
+<button class="fixed top-0 right-0 m-5 z-105" {onclick}>
+    <img src="/icons/light/share.svg" alt="share" width={70} class="drop-shadow-zinc-100 drop-shadow-sm block dark:hidden">
+    <img src="/icons/dark/share.svg" alt="share" width={70} class="drop-shadow-zinc-800 drop-shadow-sm hidden dark:block">
 </button>
 
-<Modal bind:isOpen={isModalOpen}>
-    <div class="flex flex-col items-center justify-center
-                p-5
-                max-sm:scale-75
-                rounded-2xl
-                shadow-black shadow-md
-                bg-[#474747]
+<!-- モーダル -->
+<Modal bind:isOpen={isOpen}>
+    <div class="flex flex-col justify-center items-center
+                p-5 pt-10
+                bg-zinc-100 dark:bg-zinc-800
+                shwdow-white dark:shadow-zinc-950 shadow-lg
+                scale-75 sm:scale-100
     ">
-        <img src="/home-qr.svg" alt="QRcode">
-        <div class="flex items-center justify-center m-5">
-            <p class="text-3xl">https://moiz.lu/</p>
-            <CopyButton url="https://moiz.lu" size={25} />
+        <img src="/icons/light/home-qr.svg" alt="QR code" width={300} class="block dark:hidden">
+        <img src="/icons/dark/home-qr.svg" alt="QR code" width={300} class="hidden dark:block">
+
+        <div class="flex justify-center items-center gap-4">
+            <p class="text-4xl">https://moiz.lu/</p>
+            <CopyButton className="m-10" url="https://moiz.lu/" />
         </div>
     </div>
 </Modal>
