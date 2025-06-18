@@ -1,5 +1,6 @@
 ---
 import clsx from 'clsx';
+import Icon from '../../../Svelte/ui/Icon/Icon.svelte'
 
 interface Props {
     lightIconPath: string;
@@ -11,19 +12,16 @@ interface Props {
 }
 const { lightIconPath, darkIconPath, serviceName, userName, url, className }: Props = Astro.props;
 
-const iconStyle = "z-0 relative m-3 xs:m-5 w-7 xs:w-10";
+const iconStyle = "z-0 relative m-3 xs:m-5 w-7 xs:w-10 drop-shadow-primary drop-shadow-sm";
 ---
 
 <a class={clsx(`flex justify-start items-center w-full m-2 border-1
                 transition-all duration-300
-              hover:bg-zinc-800 hover:text-zinc-100 dark:hover:bg-zinc-100 dark:hover:text-zinc-800
-              active:bg-zinc-800 active:text-zinc-100 dark:active:bg-zinc-100 dark:active:text-zinc-800
+              hover:bg-accent hover:text-primary
+              active:bg-accent active:text-primary
               `,
 (url === '#') && "pointer-events-none", className)} href={url} target="_blank">
-    <div class="">
-        <img src={lightIconPath} alt={`${serviceName}'s icon`} width={40} class={clsx(iconStyle, "block drop-shadow-zinc-100 dark:drop-shadow-zinc-800 drop-shadow-sm", (darkIconPath) &&  "dark:hidden")} />
-        {darkIconPath && <img src={darkIconPath} alt={`${serviceName}'s icon`} width={40} class={clsx(iconStyle, "hidden drop-shadow-zinc-800 drop-shadow-sm dark:block hover:block")} />}
-    </div>
+    <Icon lightSrc={lightIconPath} darkSrc={darkIconPath ?? lightIconPath} width={40} class={iconStyle} />
     <div class="flex flex-col justify-center items-start">
         <p class="text-xl xs:text-3xl m-1">{serviceName}</p>
         <p class="text-lg xs:text-2xl m-1">{userName}</p>

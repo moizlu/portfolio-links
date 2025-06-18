@@ -9,5 +9,22 @@ html {
 
 @theme {
     --breakpoint-xs: 365px;
+
     --font-primary: "M PLUS 1p", "monospace";
+
+    --color-light: var(--color-zinc-100);
+    --color-dark: var(--color-zinc-800);
+
+    --color-primary: light-dark(var(--color-light), var(--color-dark));
+    --color-accent: light-dark(var(--color-dark), var(--color-light));
+}
+
+@layer base {
+    .flex-center {
+        @apply flex justify-center items-center;
+    }
+
+    .flex-col-center {
+        @apply flex flex-col justify-center items-center;
+    }
 }
