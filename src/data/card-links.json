@@ -5,6 +5,12 @@
 		"userName": "制作中",
 		"url": "https://moizlu.com/"
 	},
+    {
+		"lightIconPath": "/logo/light/moizlu.svg",
+		"serviceName": "Tools",
+		"userName": "制作中",
+		"url": "https://tools.moizlu.com/"
+	},
 	{
 		"lightIconPath": "/logo/light/mail.svg",
         "darkIconPath": "/logo/dark/mail.svg",
