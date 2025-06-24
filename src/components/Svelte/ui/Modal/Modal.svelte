@@ -42,13 +42,7 @@
 {/if} -->
 
 {#if isOpen}
-    <div transition:fade={{duration: 150}} class="fixed top-0 left-0 w-full h-full z-10
-                  transition-opacity duration-200
-                  flex items-center justify-center
-                  bg-zinc-50 dark:bg-zinc-900 opacity-75">
-    </div>
-
-    <button transition:fade={{duration: 150}} class="fixed top-0 left-0 w-full h-full z-10
+<button transition:fade={{duration: 150}} class="fixed top-0 left-0 w-full h-full z-10
                    transition-opacity duration-200 backdrop-blur-sm
                    flex items-center justify-center"
         bind:this={backgroundElement}
