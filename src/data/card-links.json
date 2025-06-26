@@ -52,6 +52,7 @@
 	},
 	{
 		"lightIconPath": "/logo/light/instagram.svg",
+		"darkIconPath": "/logo/dark/instagram.svg",
 		"serviceName": "Instagram",
 		"userName": "moizlu",
 		"url": "https://moiz.lu/instagram"

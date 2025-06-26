@@ -1,6 +1,8 @@
 ---
 import '../styles/global.css';
 
+import SplashScreen from '../components/Svelte/parts/SplashScreen/SplashScreen.svelte';
+
 interface Props {
     faviconPath: string;
     title: string;
@@ -24,6 +26,7 @@ const { faviconPath, title }: Props = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body class="antialiased scheme-light-dark bg-primary font-primary text-accent transition-all duration-100">
+		<SplashScreen client:load />
         <slot />
 	</body>
 </html>
