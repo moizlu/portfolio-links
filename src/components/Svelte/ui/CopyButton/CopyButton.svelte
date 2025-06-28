@@ -21,5 +21,5 @@
         onclick={() => { navigator.clipboard.writeText(url); }}>
         <img src="" alt="" class="">
 
-    <Icon lightSrc="/icons/light/copy.svg" darkSrc="/icons/dark/copy.svg" alt="copy" width={size} lightImgClassName="group-hover:opacity-0 dark:group-hover:opacity-100" darkImgClassName="dark:group-hover:opacity-0" />
+    <Icon lightSrc="/icons/light/copy.svg" darkSrc="/icons/dark/copy.svg" alt="copy" width={size} lightImgClassName="group-hover:opacity-0 dark:group-hover:opacity-100 group-active:opacity-0 dark:group-active:opacity-100" darkImgClassName="dark:group-hover:opacity-0 dark:group-active:opacity-0" />
 </button>
