@@ -7,9 +7,7 @@
     let isShow = $state(true);
 
     onMount(() => {
-        setTimeout(() => {
-            isShow = false;
-        }, 500)
+        isShow = false;
     });
 </script>
 
