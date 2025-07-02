@@ -1,4 +1,5 @@
 <script lang="ts">
+    import clsx from "clsx";
     import { fade } from "svelte/transition";
 
     import Modal from "../Modal/Modal.svelte";
@@ -14,11 +15,9 @@
 
 <!-- 共有ボタン -->
 <button class="fixed top-0 right-2 sm:right-[calc(50%-var(--breakpoint-sm)/2)] m-5 z-105" {onclick}>
-    {#if isOpen}
-        <Icon lightSrc="/icons/light/close.svg" darkSrc="/icons/dark/close.svg" alt="share" width={70} class="drop-shadow-primary drop-shadow-sm" />
-    {:else}
-        <Icon lightSrc="/icons/light/share.svg" darkSrc="/icons/dark/share.svg" alt="share" width={70} class="drop-shadow-primary drop-shadow-sm" />
-    {/if}
+    <Icon lightSrc="/icons/light/close.svg" darkSrc="/icons/dark/close.svg" alt="share" width={70} class={clsx((isOpen) ? "hidden" : "block", "absolute drop-shadow-primary drop-shadow-sm")} />
+    <Icon lightSrc="/icons/light/share.svg" darkSrc="/icons/dark/share.svg" alt="share" width={70} class={clsx((isOpen) ? "block" : "hidden", "drop-shadow-primary drop-shadow-sm")} />
+
 </button>
 
 <!-- モーダル -->
