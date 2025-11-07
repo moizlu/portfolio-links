@@ -1,5 +1,6 @@
 <script lang="ts">
     import clsx from 'clsx';
+    import Icon from '../Icon/Icon.svelte';
 
     interface Props {
         url: string;
@@ -9,15 +10,16 @@
     const { url, size=25, className }: Props = $props();
 </script>
 
-<button class={clsx(className, `flex justify-center items-center
+<button class={clsx(className, `group flex justify-center items-center
                                 transition-all duration-300
                                 w-15 h-15 m-2 p-3
-                                bg-zinc-800 dark:bg-zinc-100
-                                shadow-zinc-500 shadow-md
-                                active:bg-zinc-300 dark:active:bg-zinc-600`
+                                bg-accent
+                                hover:bg-primary active:bg-primary
+                                border-accent border-1
+                                `
 )}
         onclick={() => { navigator.clipboard.writeText(url); }}>
+        <img src="" alt="" class="">
 
-    <img src="/icons/light/copy.svg" alt="copy" width={size} class="block dark:hidden" />
-    <img src="/icons/dark/copy.svg" alt="copy" width={size} class="hidden dark:block" />
+    <Icon lightSrc="/icons/light/copy.svg" darkSrc="/icons/dark/copy.svg" alt="copy" width={size} lightImgClassName="group-hover:opacity-0 dark:group-hover:opacity-100 group-active:opacity-0 dark:group-active:opacity-100" darkImgClassName="group-hover:opacity-100 group-active:opacity-100 dark:group-hover:opacity-0 dark:group-active:opacity-0" />
 </button>

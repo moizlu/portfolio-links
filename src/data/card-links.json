@@ -5,6 +5,12 @@
 		"userName": "制作中",
 		"url": "https://moizlu.com/"
 	},
+    {
+		"lightIconPath": "/logo/light/moizlu.svg",
+		"serviceName": "Tools",
+		"userName": "制作中",
+		"url": "https://tools.moizlu.com/"
+	},
 	{
 		"lightIconPath": "/logo/light/mail.svg",
         "darkIconPath": "/logo/dark/mail.svg",
@@ -46,6 +52,7 @@
 	},
 	{
 		"lightIconPath": "/logo/light/instagram.svg",
+		"darkIconPath": "/logo/dark/instagram.svg",
 		"serviceName": "Instagram",
 		"userName": "moizlu",
 		"url": "https://moiz.lu/instagram"
