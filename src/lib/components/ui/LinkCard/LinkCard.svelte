@@ -32,5 +32,5 @@
         </div>
     </a>
 
-    <CopyButton text={url} class="mr-4" />
+    <CopyButton text={url} class="mr-3" />
 </div>
