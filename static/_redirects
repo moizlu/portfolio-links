@@ -1,8 +1,16 @@
+/youtube      https://www.youtube.com/@moizlu/                 301
 /youtube/*      https://www.youtube.com/@moizlu/:splat                 301
+/x            https://x.com/moizlu/                            301
 /x/*            https://x.com/moizlu/:splat                            301
+/twitter      https://x.com/moizlu/                            301
 /twitter/*      https://x.com/moizlu/:splat                            301
+/steam        https://steamcommunity.com/id/moizlu/            301
 /steam/*        https://steamcommunity.com/id/moizlu/:splat            301
+/pixiv        https://pixiv.me/moizlu/                         301
 /pixiv/*        https://pixiv.me/moizlu/:splat                         301
+/instagram    https://www.instagram.com/moizlu/                301
 /instagram/*    https://www.instagram.com/moizlu/:splat                301
+/github       https://github.com/moizlu/                       301
 /github/*       https://github.com/moizlu/:splat                       301
+/discord      https://discord.com/users/607472928669302784/    301
 /discord/*      https://discord.com/users/607472928669302784/:splat    301
