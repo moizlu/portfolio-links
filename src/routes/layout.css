@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1&display=swap');
+@import 'tailwindcss';
+
+/* @custom-variant dark (&:where(.dark, .dark *)); */
+
+html {
+    scrollbar-gutter: stable;
+}
+
+@theme {
+    --breakpoint-xs: 500px;
+    --breakpoint-2xs: 365px;
+
+    --font-primary: "M PLUS 1", "monospace";
+
+    /* ベースカラー */
+    --color-base-light: var(--color-neutral-100);
+    --color-base-dark: var(--color-neutral-800);
+    --color-base: light-dark(var(--color-base-light), var(--color-base-dark));
+    /* ラベル(テキストなど)カラー(ベースカラーを逆転) */
+    --color-label-light: var(--color-base-dark);
+    --color-label-dark: var(--color-base-light);
+    --color-label: light-dark(var(--color-label-light), var(--color-label-dark));
+
+    --color-information: var(--color-sky-400);
+    --color-success: light-dark(var(--color-green-700), var(--color-green-500));
+    --color-danger: light-dark(var(--color-red-600), var(--color-red-500));
+    --color-warning: var(--color-yellow-300);
+    --color-disabled: light-dark(var(--color-neutral-300), var(--color-neutral-500));
+
+    --color-turn-on: var(--color-sky-400);
+    --color-turn-off: var(--color-neutral-500);
+
+    --spacing-safe-top: env(safe-area-inset-top);
+    --spacing-safe-bottom: env(safe-area-inset-bottom);
+    --spacing-safe-left: env(safe-area-inset-left);
+    --spacing-safe-light: env(safe-area-inset-right);
+
+    --spacing-safe-x: env(safe-area-inset-left);
+    --spacing-safe-y: env(safe-area-inset-bottom);
+}
+
+@layer base {
+    h1 {
+        @apply text-4xl md:text-5xl;
+    }
+
+    h2 {
+        @apply text-3xl md:text-4xl;
+    }
+
+    h3 {
+        @apply text-2xl md:text-3xl;
+    }
+
+    /* p {
+        word-break: keep-all;
+        overflow-wrap: break-word;
+    } */
+
+    input[type="checkbox"] {
+        @apply sr-only;
+    }
+
+    label:has(input[type="checkbox"]) {
+        @apply cursor-pointer
+               relative flex
+               before:transition-all before:duration-200
+               before:block before:content-[''] before:w-12 before:h-7 before:bg-base before:inset-shadow-black before:inset-shadow-sm/100 before:rounded-full
+               after:transition-all after:duration-200
+               after:content-[''] after:absolute after:left-0 after:w-5 after:h-5 after:mx-0.5 after:my-1 after:bg-label
+               hover:after:translate-x-0.5
+               after:rounded-full after:shadow-black after:shadow-sm/100;
+    }
+
+    label:has(input[type="checkbox"]:checked) {
+        @apply before:bg-turn-on after:translate-x-6 hover:after:translate-x-5.5;
+    }
+
+    label:has(input[type="checkbox"]:disabled) {
+        @apply before:bg-disabled;
+    }
+
+    input[type="text"], input[type="email"], textarea {
+        @apply p-2 rounded-2xl border-label border;
+    }
+}
+
+@layer components {
+    .flex-center {
+        @apply flex justify-center items-center;
+    }
+
+    .flex-col-center {
+        @apply flex flex-col justify-center items-center;
+    }
+
+    .section-default {
+        @apply transition-all duration-600 opacity-0 translate-y-30;
+    }
+
+    .section-fadeIn {
+        @apply opacity-100 translate-0;
+    }
+
+    .button-general {
+        @apply transition-all duration-300 rounded-sm hover:bg-label/3 active:bg-label/10 shadow-black shadow-md/100 hover:shadow-md/50 active:shadow-sm/5 cursor-pointer disabled:cursor-not-allowed disabled:bg-disabled disabled:shadow-sm/10;
+    }
+
+    .button-bg-default {
+        @apply bg-base/30 hover:bg-base/50 active:bg-base/70;
+    }
+
+    .button-bg-turn-on {
+        @apply bg-turn-on/30 hover:bg-turn-on/50 active:bg-turn-on/70;
+    }
+}

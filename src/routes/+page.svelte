@@ -1,0 +1,11 @@
+<script lang="ts">
+    import ShareButton from "$lib/components/ui/ShareButton";
+    import Profile from "$lib/components/sections/Profile";
+    import Links from "$lib/components/sections/Links";
+</script>
+
+<main class="my-5 w-full min-h-dvh h-full flex-col-center">
+    <ShareButton />
+    <Profile />
+    <Links />
+</main>
