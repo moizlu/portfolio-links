@@ -18,12 +18,12 @@
         isCopied = true;
         setTimeout(() => {
             isCopied = false;
-        }, 1000);
+        }, 3000);
     }
 </script>
 
 <button title="copy" {onclick} {...props} class={[className, "overflow-clip m-2 w-15 h-15 rounded-full button-general button-bg-default flex-center"]}>
-    <div class={["transition-all duration-300 flex-center gap-4", (isCopied) ? "-translate-x-7" : "translate-x-7"]}>
+    <div class={["transition-all duration-600 flex-center gap-4", (isCopied) ? "-translate-x-7" : "translate-x-7"]}>
         <SvgIcon Svg={CopyIcon} size={30} class=" w-10 h-10" />
         <SvgIcon Svg={CheckIcon} size={30} class="w-10 h-10" />
     </div>
