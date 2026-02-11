@@ -4,8 +4,10 @@
     import Links from "$lib/components/sections/Links";
 </script>
 
-<main class="my-5 w-full min-h-dvh h-full flex-col-center">
-    <ShareButton />
-    <Profile />
-    <Links />
+<main class="my-5 w-full min-h-dvh h-full flex-center">
+    <div class="relative flex-col-center">
+        <ShareButton />
+        <Profile />
+        <Links />
+    </div>
 </main>

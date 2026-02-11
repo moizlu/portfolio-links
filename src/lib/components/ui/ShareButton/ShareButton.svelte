@@ -16,6 +16,7 @@
             content: shareDialog,
             isModal: false,
             isDrawWindow: true,
+            requireContrast: true
         })
     }
 </script>
@@ -30,10 +31,10 @@
     </div>
 {/snippet}
 
-<div class="z-100 mx-auto max-w-200 w-full fixed top-0 flex justify-end items-center pointer-events-none cursor-pointer">
+<div class="z-100 w-full absolute top-0 flex justify-end items-center pointer-events-none cursor-pointer">
         {#if dialog.isOpened}
             <button title="close" onclick={() => dialog.deactivate()} class="pointer-events-auto cursor-pointer">
-                <SvgIcon Svg={CloseIcon} size={50} class="m-2 drop-shadow-base drop-shadow-sm/100" />
+                <SvgIcon Svg={CloseIcon} size={100} class="m-2 drop-shadow-base drop-shadow-sm/100 translate-x-6.25 -translate-y-6.25" />
             </button>
         {:else}
             <button title="share" {onclick} class="pointer-events-auto cursor-pointer">
