@@ -2,7 +2,7 @@
     import ShareIcon from "$lib/assets/icons/share.svelte";
     import CloseIcon from "$lib/assets/icons/close.svelte";
     import QRLightIcon from "$lib/assets/icons/light/home-qr.svg";
-    import QRDarkIcon from "$lib/assets/icons/Dark/home-qr.svg";
+    import QRDarkIcon from "$lib/assets/icons/dark/home-qr.svg";
 
     import CopyButton from "../CopyButton";
 
