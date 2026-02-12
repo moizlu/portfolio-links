@@ -1,8 +1,6 @@
 <script lang="ts">
     import ArrowIcon from "$lib/assets/icons/arrow.svelte";
 
-    import { browser } from "$app/environment";
-    import { goto } from "$app/navigation";
     import { page } from "$app/state";
 
     import SvgIcon from "$lib/components/ui/SvgIcon";
