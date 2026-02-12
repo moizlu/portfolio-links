@@ -30,6 +30,6 @@
 <SplashScreen />
 <DialogEntrypoint />
 
-<div class="w-full h-dvh">
+<div class="w-full h-full">
 	{@render children()}
 </div>
