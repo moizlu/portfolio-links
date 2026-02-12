@@ -25,7 +25,7 @@
     // ツール集, pixiv, YouTube, インスタは必要に応じて
 </script>
 
-<div class="m-2 grid grid-flow-row md:grid-cols-2 gap-2">
+<div class="mb-5 m-2 grid grid-flow-row md:grid-cols-2 gap-2">
     {#each linkItems as item}
         <LinkCard {...item} />
     {/each}
