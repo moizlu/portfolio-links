@@ -20,9 +20,9 @@
             <SvgIcon Svg={icon} size={35} class="m-5 text-label" />
         {:else if icons?.light}
             {#if icons.dark}
-                <Icon lightSrc={icons.light} darkSrc={icons.dark} size={35} alt={serviceName} class="m-5" />
+                <Icon lightSrc={icons.light} darkSrc={icons.dark} size={35} alt={serviceName} class="m-5 pointer-events-none" />
             {:else}
-                <img src={icons.light} width={35} height={35} alt={serviceName} class="m-5">
+                <img src={icons.light} width={35} height={35} alt={serviceName} class="m-5 pointer-events-none">
             {/if}
         {/if}
 
