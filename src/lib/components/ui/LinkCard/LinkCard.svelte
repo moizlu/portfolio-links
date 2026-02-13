@@ -14,7 +14,7 @@
     }
 </script>
 
-<div class="w-75 h-20 flex justify-between items-center outline-label rounded-4xl button-general outline-1 -outline-offset-5">
+<div class="w-full max-w-80 h-20 flex justify-between items-center outline-label rounded-4xl button-general outline-1 -outline-offset-5">
     <a title={serviceName} href={`${urlPrefix ?? ""}${url}`} target="_blank" class="w-full h-full flex justify-start items-center cursor-pointer">
         {#if icon}
             <SvgIcon Svg={icon} size={35} class="m-5 text-label" />
@@ -26,7 +26,7 @@
             {/if}
         {/if}
 
-        <div class="flex-1 flex-col-center gap-1">
+        <div class="flex-1 flex-col-center gap-1 text-nowrap">
             <p class="text-lg">{serviceName}</p>
             <p class="text-xs">{userName}</p>
         </div>
