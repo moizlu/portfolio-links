@@ -21,10 +21,10 @@
     }
 </script>
 
-<!-- <svelte:head>
+<svelte:head>
     <link rel="preload" href={QRLightIcon} as="image" type="image/svg+xml" />
     <link rel="preload" href={QRDarkIcon} as="image" type="image/svg+xml" />
-</svelte:head> -->
+</svelte:head>
 
 {#snippet shareDialog()}
     <div class="flex-col-center">
