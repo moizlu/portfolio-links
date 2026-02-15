@@ -5,8 +5,6 @@
     import { toast } from "./state.svelte";
 
     import SvgIcon from "../SvgIcon";
-
-    $effect(() => console.log(toast.toast?.text))
 </script>
 
 {#if toast.toast}
