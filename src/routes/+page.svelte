@@ -10,7 +10,7 @@
 
     if (browser) {
         if (page.url.pathname !== "/") {
-            toast.push({ text: `${page.url.pathname}\nURLが見つかりません。` });
+            toast.push({ text: `${page.url.pathname}\nURLが見つかりません。`, displayTime: 7000 });
         }
         goto('/', { replaceState: true, keepFocus: true, noScroll: true });
     }
