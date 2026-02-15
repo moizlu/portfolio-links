@@ -31,7 +31,7 @@
         <Icon lightSrc={QRLightIcon} darkSrc={QRDarkIcon} size={250} />
         <div class="flex-center">
             <p>https://moiz.lu/</p>
-            <CopyButton text="https://moiz.lu/" />
+            <CopyButton text="https://moiz.lu/" class="scale-75" />
         </div>
     </div>
 {/snippet}
