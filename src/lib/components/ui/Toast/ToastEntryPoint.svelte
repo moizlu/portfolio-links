@@ -1,0 +1,29 @@
+<script lang="ts">
+    import CloseIcon from "$lib/assets/icons/close.svelte";
+
+    import { slide } from "svelte/transition";
+    import { toast } from "./state.svelte";
+
+    import SvgIcon from "../SvgIcon";
+
+    $effect(() => console.log(toast.toast?.text))
+</script>
+
+{#if toast.toast}
+    <div transition:slide={{duration: 300, axis: 'y'}} role="button" tabindex="0" onkeydown={(e) => { if (e.key === 'Enter') { (e.target as any)?.click(); }}}
+        class="z-1000 fixed top-0 left-0 mt-5 w-full h-20 flex-center whitespace-pre-wrap">
+        <div class="w-full h-full max-w-200 m-2 p-2  flex-center bg-base/25 backdrop-blur-2xl outline-label outline-1 rounded-2xl text-sm sm:text-lg overflow-clip">
+            <p class="pr-10 w-full text-center overflow-clip">{toast.toast.text}</p>
+
+            <button title="close" onclick={() => toast.close()} class="absolute top-0 right-0 h-full mr-3 cursor-pointer">
+                <SvgIcon Svg={CloseIcon} size={50} />
+            </button>
+        </div>
+    </div>
+{/if}
+
+<style>
+    p {
+        text-overflow: ellipsis;
+    }
+</style>

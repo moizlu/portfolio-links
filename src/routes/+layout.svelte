@@ -6,6 +6,7 @@
 
 	import SplashScreen from '$lib/components/sections/SplashScreen';
 	import { DialogEntrypoint } from '$lib/components/ui/Dialog';
+	import { ToastEntryPoint } from '$lib/components/ui/Toast';
 
 	let { children } = $props();
 </script>
@@ -29,6 +30,7 @@
 
 <SplashScreen />
 <DialogEntrypoint />
+<ToastEntryPoint />
 
 <div class="w-full h-full">
 	{@render children()}
