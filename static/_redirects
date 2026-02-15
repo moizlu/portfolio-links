@@ -1,28 +1,28 @@
-/contact        https://moizlu.com/#contact                              301
+/contact        https://moizlu.com/#contact                              302
 
-/youtube        https://www.youtube.com/@moizlu/                         301
-/youtube/*      https://www.youtube.com/@moizlu/:splat                   301
+/youtube        https://www.youtube.com/@moizlu/                         302
+/youtube/*      https://www.youtube.com/@moizlu/:splat                   302
 
-/x              https://x.com/moizlu/                                    301
-/x/*            https://x.com/moizlu/:splat                              301
+/x              https://x.com/moizlu/                                    302
+/x/*            https://x.com/moizlu/:splat                              302
 
-/twitter        https://x.com/moizlu/                                    301
-/twitter/*      https://x.com/moizlu/:splat                              301
+/twitter        https://x.com/moizlu/                                    302
+/twitter/*      https://x.com/moizlu/:splat                              302
 
-/steam          https://steamcommunity.com/id/moizlu/                    301
-/steam/*        https://steamcommunity.com/id/moizlu/:splat              301
+/steam          https://steamcommunity.com/id/moizlu/                    302
+/steam/*        https://steamcommunity.com/id/moizlu/:splat              302
 
-/pixiv          https://www.pixiv.net/users/114747082                    301
-/pixiv/*        https://www.pixiv.net/users/114747082/:splat             301
+/pixiv          https://www.pixiv.net/users/114747082                    302
+/pixiv/*        https://www.pixiv.net/users/114747082/:splat             302
 
-/artstation     https://www.artstation.com/moizlu                        301
-/artstation/*   https://www.artstation.com/moizlu/:splat                 301
+/artstation     https://www.artstation.com/moizlu                        302
+/artstation/*   https://www.artstation.com/moizlu/:splat                 302
 
-/instagram      https://www.instagram.com/moizlu/                        301
-/instagram/*    https://www.instagram.com/moizlu/:splat                  301
+/instagram      https://www.instagram.com/moizlu/                        302
+/instagram/*    https://www.instagram.com/moizlu/:splat                  302
 
-/github         https://github.com/moizlu/                               301
-/github/*       https://github.com/moizlu/:splat                         301
+/github         https://github.com/moizlu/                               302
+/github/*       https://github.com/moizlu/:splat                         302
 
-/discord        https://discord.com/users/607472928669302784/            301
-/discord/*      https://discord.com/users/607472928669302784/:splat      301
+/discord        https://discord.com/users/607472928669302784/            302
+/discord/*      https://discord.com/users/607472928669302784/:splat      302
