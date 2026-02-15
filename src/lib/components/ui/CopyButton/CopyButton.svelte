@@ -22,7 +22,7 @@
     }
 </script>
 
-<button title="copy" {onclick} {...props} class={[className, "overflow-clip m-2 w-13 h-13 rounded-full button-general button-bg-default flex-center"]}>
+<button title="copy" {onclick} {...props} class={[className, "overflow-clip w-13 h-13 rounded-full button-general button-bg-default flex-center"]}>
     <div class={["transition-all duration-600 flex-center gap-4", (isCopied) ? "-translate-x-6" : "translate-x-6"]}>
         <SvgIcon Svg={CopyIcon} size={30} class=" w-8 h-8" />
         <SvgIcon Svg={CheckIcon} size={30} class="w-8 h-8" />

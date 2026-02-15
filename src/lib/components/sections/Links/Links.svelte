@@ -15,8 +15,8 @@
     import LinkCard from "$lib/components/ui/LinkCard";
 
     const linkItems: LinkItemProps[] = [
-        { icon: MailIcon, serviceName: "お問い合わせ", userName: "公式サイト", url: "https://moizlu.com/#contact" },
-        { icons: { light: favicon }, serviceName: "ポートフォリオ", userName: "公式サイト", url: "https://moizlu.com" },
+        { icon: MailIcon, serviceName: "お問い合わせ", userName: "moizlu.com", url: "https://moizlu.com/#contact" },
+        { icons: { light: favicon }, serviceName: "公式サイト", userName: "moizlu.com", url: "https://moizlu.com" },
         { icons: { light: DiscordLightIcon }, serviceName: "Discord", userName: "moizlu", url: "https://moiz.lu/discord" },
         { icons: { light: GithubLightIcon, dark: GithubDarkIcon }, serviceName: "GitHub", userName: "moizlu", url: "https://moiz.lu/github" },
         { icons: { light: XLightIcon, dark: XDarkIcon }, serviceName: "X(旧Twitter)", userName: "@moizlu", url: "https://moiz.lu/x" },
@@ -25,7 +25,7 @@
     // ツール集, pixiv, YouTube, インスタは必要に応じて
 </script>
 
-<div class="mb-5 m-2 grid grid-flow-row md:grid-cols-2 gap-2">
+<div class="w-full px-5 mb-5 m-2 grid grid-flow-row sm:grid-cols-2 gap-2">
     {#each linkItems as item}
         <LinkCard {...item} />
     {/each}
