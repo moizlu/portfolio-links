@@ -1,5 +1,7 @@
 /contact        https://moizlu.com/#contact                              302
 
+/yt             https://www.youtube.com/@moizlu/                         302
+/yt/*           https://www.youtube.com/@moizlu/:splat                   302
 /youtube        https://www.youtube.com/@moizlu/                         302
 /youtube/*      https://www.youtube.com/@moizlu/:splat                   302
 
@@ -21,6 +23,8 @@
 /instagram      https://www.instagram.com/moizlu/                        302
 /instagram/*    https://www.instagram.com/moizlu/:splat                  302
 
+/gh             https://github.com/moizlu/                               302
+/gh/*           https://github.com/moizlu/:splat                         302
 /github         https://github.com/moizlu/                               302
 /github/*       https://github.com/moizlu/:splat                         302
 
