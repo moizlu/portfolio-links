@@ -21,6 +21,10 @@
 	<meta property="og:site_name" content="リンク集 | moizlu" />
 	<meta property="og:description" content="リンク集 | moizlu" />
 
+	{#if typeof window !== 'undefined' && window.location.pathname !== '/'}
+	    <meta name="robots" content="noindex" />
+  	{/if}
+
 	{#if dev}
 		<title>[開発鯖]リンク集 | moizlu</title>
 	{:else}
