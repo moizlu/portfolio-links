@@ -7,13 +7,26 @@
     import ShareButton from "$lib/components/ui/ShareButton";
     import Profile from "$lib/components/sections/Profile";
     import Links from "$lib/components/sections/Links";
+    import { onMount } from "svelte";
 
-    if (browser) {
-        if (page.url.pathname !== "/") {
-            toast.push({ text: `${page.url.pathname}\nURLが見つかりません。`, displayTime: 10000 });
+    onMount(() => {
+        const pathname = page.url.pathname;
+
+        const onSplashHidden = () => {
+            if (pathname === "/") { return; }
+            setTimeout(() => {
+                toast.push({ text: `${pathname}\nURLが見つかりません。`, displayTime: 10000 });
+            }, 100);
         }
+
+        document.addEventListener('splashHidden', onSplashHidden);
+
         goto('/', { replaceState: true, keepFocus: true, noScroll: true });
-    }
+
+        return () => {
+            document.removeEventListener('splashHidden', onSplashHidden);
+        }
+    });
 </script>
 
 <main class="w-full min-h-dvh h-full flex-center">

@@ -4,22 +4,22 @@
     import { onMount } from "svelte";
 
     import SvgIcon from "$lib/components/ui/SvgIcon";
+    import { splashState } from "$lib/components/state";
 
     let isInitialized = $state(false);
-    let isAppearSplash = $state(true);
 
     onMount(() => {
         setTimeout(() => {
             isInitialized = true;
 
             setTimeout(() => {
-                isAppearSplash = false;
+                splashState.isAppear = false
             }, 500);
         }, 500);
     });
 </script>
 
-{#if isAppearSplash}
+{#if splashState.isAppear}
     <div class={["transition-all duration-500 z-1000 splash-clip fixed top-0 left-0 w-full h-full bg-label flex-col-center", (isInitialized) ? "clip-hole" : "overflow-hidden"]}>
         <SvgIcon Svg={LoadingIcon} size={100} class="text-base animate-spin" />
         <p class="text-base text-xl">読み込み中......</p>
