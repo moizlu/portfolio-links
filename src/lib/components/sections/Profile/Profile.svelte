@@ -6,7 +6,7 @@
 
 <div class="-mt-15 m-4 w-full flex-col-center gap-2">
     <img src={favicon} alt="logo" width={200} height={200} class="pointer-events-none">
-    <div class="w-full px-6 flex-col-center">
+    <div class="w-75 sm:w-80 px-6 flex-col-center">
         <div class="w-full flex-center">
             <h2 class="flex-1 ml-10 text-center">もいずる</h2>
             <CopyButton text="もいずる" class="mr-2 -ml-6 scale-75" />
