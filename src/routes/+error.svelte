@@ -12,8 +12,6 @@
     if (browser) {
         const pathname = page.url.pathname;
 
-        goto('/', { replaceState: true, keepFocus: true, noScroll: true });
-
         const onSplashHidden = () => {
             if (pathname === "/") { return; }
             setTimeout(() => {
