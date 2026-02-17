@@ -4,7 +4,7 @@
     import { onMount } from "svelte";
 
     import SvgIcon from "$lib/components/ui/SvgIcon";
-    import { splashState } from "$lib/components/state";
+    import { splashState } from "$lib/state";
 
     let isInitialized = $state(false);
 

@@ -2,15 +2,27 @@
     import favicon from "$lib/assets/favicon.svg";
     import ArrowIcon from "$lib/assets/icons/arrow.svelte";
 
+    import { browser } from "$app/environment";
     import { page } from "$app/state";
+    import { goto } from "$app/navigation";
 
+    import { toast } from "$lib/components/ui/Toast";
     import SvgIcon from "$lib/components/ui/SvgIcon";
 
-    // if (browser) {
-    //     if (page.status === 404) {
-    //         goto('/');
-    //     }
-    // }
+    if (browser) {
+        const pathname = page.url.pathname;
+
+        const onSplashHidden = () => {
+            if (pathname === "/") { return; }
+            setTimeout(() => {
+                toast.push({ text: `${pathname}\nURLが見つかりません。`, displayTime: 10000 });
+            }, 100);
+        }
+
+        document.addEventListener('splashHidden', onSplashHidden, { once: true });
+
+        goto('/', { replaceState: true, keepFocus: true, noScroll: true });
+    }
 </script>
 
 <main class="w-full h-dvh flex-col-center gap-2">
@@ -22,9 +34,6 @@
 
     <h1>{page.status}</h1>
     {page.url.pathname}
-    {#if page.status === 404}
-        <p class="text-center">URLが見つかりませんでした。<br>入力ミスが無いか確認してください。</p>
-    {/if}
 
     <a href="/" title="back to root" class="w-60 p-2 flex justify-start items-center rounded-full button-general">
         <SvgIcon Svg={ArrowIcon} size={30} class="rotate-270 text-label" />
