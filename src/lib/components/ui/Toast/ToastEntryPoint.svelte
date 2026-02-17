@@ -13,7 +13,7 @@
         class="z-500 fixed top-0 left-0 mt-5 w-full h-20 flex-center whitespace-pre-wrap">
         <div class="w-full h-full max-w-200 m-2 p-2  flex-center bg-base/25 backdrop-blur-2xl outline-label outline-1 rounded-2xl text-sm sm:text-lg overflow-clip">
             <div class="blink-icon">
-                <SvgIcon Svg={InfoIcon} size={50} />
+                <SvgIcon Svg={InfoIcon} size={40} />
             </div>
 
             <p class="pr-10 w-full text-center overflow-clip">{toast.toast.text}</p>
