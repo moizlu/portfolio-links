@@ -15,8 +15,8 @@
     import LinkCard from "$lib/components/ui/LinkCard";
 
     const linkItems: LinkItemProps[] = [
-        { icon: MailIcon, serviceName: "お問い合わせ", userName: "moizlu.com", url: "https://moiz.lu/contact" },
         { icons: { light: favicon }, serviceName: "公式サイト", userName: "moizlu.com", url: "https://moizlu.com" },
+        { icon: MailIcon, serviceName: "お問い合わせ", userName: "moizlu.com", url: "https://moiz.lu/contact" },
         { icons: { light: DiscordLightIcon }, serviceName: "Discord", userName: "moizlu", url: "https://moiz.lu/discord" },
         { icons: { light: GithubLightIcon, dark: GithubDarkIcon }, serviceName: "GitHub", userName: "moizlu", url: "https://moiz.lu/github" },
         { icons: { light: XLightIcon, dark: XDarkIcon }, serviceName: "X(旧Twitter)", userName: "@moizlu", url: "https://moiz.lu/x" },
