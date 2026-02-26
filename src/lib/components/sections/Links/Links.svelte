@@ -1,5 +1,6 @@
 <script lang="ts">
     import MailIcon from "$lib/assets/icons/mail.svelte";
+    import ToolsIcon from "$lib/assets/icons/tools.svelte";
     import DiscordLightIcon from "$lib/assets/icons/light/discord.svg";
     import GithubLightIcon from "$lib/assets/icons/light/github.svg";
     import GithubDarkIcon from "$lib/assets/icons/dark/github.svg";
@@ -17,6 +18,7 @@
     const linkItems: LinkItemProps[] = [
         { icons: { light: favicon }, serviceName: "公式サイト", userName: "moizlu.com", url: "https://moizlu.com" },
         { icon: MailIcon, serviceName: "お問い合わせ", userName: "moizlu.com", url: "https://moiz.lu/contact" },
+        { icon: ToolsIcon, serviceName: "Webツール", userName: "tools.moizlu.com", url: "https://tools.moizlu.com" },
         { icons: { light: DiscordLightIcon }, serviceName: "Discord", userName: "moizlu", url: "https://moiz.lu/discord" },
         { icons: { light: GithubLightIcon, dark: GithubDarkIcon }, serviceName: "GitHub", userName: "moizlu", url: "https://moiz.lu/github" },
         { icons: { light: XLightIcon, dark: XDarkIcon }, serviceName: "X(旧Twitter)", userName: "@moizlu", url: "https://moiz.lu/x" },
