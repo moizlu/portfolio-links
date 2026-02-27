@@ -16,4 +16,6 @@
             <CopyButton text="moizlu" class="mr-2 -ml-6 scale-75" />
         </div>
     </div>
+
+    <p class="text-sm md:text-lg">Webとマイコン開発が好きなプログラマー。</p>
 </div>
