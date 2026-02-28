@@ -26,9 +26,9 @@
   	{/if}
 
 	{#if dev}
-		<title>[開発鯖]リンク集 | moizlu</title>
+		<title>[開発鯖]もいずる | moizlu</title>
 	{:else}
-		<title>リンク集 | moizlu</title>
+		<title>もいずる | moizlu</title>
 	{/if}
 </svelte:head>
 
