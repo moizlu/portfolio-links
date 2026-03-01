@@ -28,9 +28,9 @@
     const linkItems: LinkItemProps[] = [
         { icons: { light: favicon }, serviceName: "ポートフォリオ", userName: "moizlu.com", url: "https://moizlu.com" },
         { icon: ToolsIcon, serviceName: "Webツール", userName: "", url: "https://tools.moizlu.com" },
-        { icons: { light: DiscordLightIcon, dark: DiscordDarkIcon }, serviceName: "Discord", userName: "moizlu", url: "https://moiz.lu/discord" },
-        { icons: { light: GithubLightIcon, dark: GithubDarkIcon }, serviceName: "GitHub", userName: "moizlu", url: "https://moiz.lu/github" },
         { icons: { light: XLightIcon, dark: XDarkIcon }, serviceName: "X", userName: "@moizlu", url: "https://moiz.lu/x" },
+        { icons: { light: GithubLightIcon, dark: GithubDarkIcon }, serviceName: "GitHub", userName: "moizlu", url: "https://moiz.lu/github" },
+        { icons: { light: DiscordLightIcon, dark: DiscordDarkIcon }, serviceName: "Discord", userName: "moizlu", url: "https://moiz.lu/discord" },
         // { icons: { light: SteamLightIcon, dark: SteamDarkIcon }, serviceName: "Steam", userName: "moizlu", url: "https://moiz.lu/steam" },
     ];
 </script>
