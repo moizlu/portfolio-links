@@ -20,7 +20,7 @@
     import LinkCard from "$lib/components/ui/LinkCard";
 
     const officialSites: LinkItemProps[] = [
-        { icons: { light: XLightIcon, dark: XDarkIcon }, serviceName: "X(DM)", userName: "", url: "https://moiz.lu/x-dm" },
+        { icons: { light: XLightIcon, dark: XDarkIcon }, serviceName: "X", userName: "", url: "https://moiz.lu/x" },
         { icon: MailIcon, serviceName: "メールアドレス", userName: "", urlPrefix: "mailto:", url: () => { const a = ["me", "moizlu", "com"]; return `${a[0]}@${a[1]}.${a[2]}`; } },
         { icon: SendIcon, serviceName: "フォーム", userName: "", url: "https://moiz.lu/contact" },
     ];
