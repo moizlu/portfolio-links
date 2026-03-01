@@ -5,7 +5,7 @@
 </script>
 
 <main class="w-full min-h-dvh h-full flex-center">
-    <div class="p-5 w-full max-w-200 relative flex-col-center gap-5">
+    <div class="p-5 py-10 w-full max-w-200 relative flex-col-center gap-5">
         <ShareButton />
         <Profile />
         <Links />
