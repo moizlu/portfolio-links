@@ -14,9 +14,9 @@
     import favicon from "$lib/assets/favicon.svg";
 
     import type { LinkItemProps } from "$lib/types";
-    import SvgIcon from "$lib/components/ui/SvgIcon";
+    // import SvgIcon from "$lib/components/ui/SvgIcon";
 
-    import OfficialSiteLinkCard from "$lib/components/ui/OfficialSiteLinkCard";
+    // import OfficialSiteLinkCard from "$lib/components/ui/OfficialSiteLinkCard";
     import LinkCard from "$lib/components/ui/LinkCard";
 
     const officialSites: LinkItemProps[] = [
