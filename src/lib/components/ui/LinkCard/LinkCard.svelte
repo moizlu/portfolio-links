@@ -9,8 +9,9 @@
 
     const ICON_PX = 20;
 
-    const generateUrl = () => {
+    const generateUrl = (e: Event) => {
         if (typeof url === 'string') { return; }
+        if (e.target !== e.currentTarget) { return; }
 
         const a = document.createElement('a');
         a.href = `${urlPrefix}${url()}`;
