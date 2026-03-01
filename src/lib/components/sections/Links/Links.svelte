@@ -66,7 +66,7 @@
             <span class="px-2 bg-base">各種リンク</span>
         </p>
 
-        <div class="w-fit grid grid-flow-row grid-cols-2 min-[390px]:grid-cols-3 min-[750px]:grid-cols-6 gap-2">
+        <div class="w-fit grid grid-flow-row grid-cols-2 min-[390px]:grid-cols-3 min-[600px]:grid-cols-5 gap-2">
             {#each linkItems as item}
                 <LinkCard {...item} />
             {/each}
