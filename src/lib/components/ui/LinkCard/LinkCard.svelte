@@ -13,7 +13,7 @@
         if (typeof url === 'string') {
             return url;
         } else {
-            url();
+            return url();
         }
     }
 </script>
