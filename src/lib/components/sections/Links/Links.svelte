@@ -31,7 +31,7 @@
         { icons: { light: DiscordLightIcon, dark: DiscordDarkIcon }, serviceName: "Discord", userName: "moizlu", url: "https://moiz.lu/discord" },
         { icons: { light: GithubLightIcon, dark: GithubDarkIcon }, serviceName: "GitHub", userName: "moizlu", url: "https://moiz.lu/github" },
         { icons: { light: XLightIcon, dark: XDarkIcon }, serviceName: "X", userName: "@moizlu", url: "https://moiz.lu/x" },
-        { icons: { light: SteamLightIcon, dark: SteamDarkIcon }, serviceName: "Steam", userName: "moizlu", url: "https://moiz.lu/steam" },
+        // { icons: { light: SteamLightIcon, dark: SteamDarkIcon }, serviceName: "Steam", userName: "moizlu", url: "https://moiz.lu/steam" },
     ];
 </script>
 
