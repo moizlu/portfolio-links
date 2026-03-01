@@ -7,30 +7,37 @@
     interface Props extends LinkItemProps {}
     let { icon, icons, serviceName, userName, url, urlPrefix }: Props = $props();
 
-    // svelte-ignore state_referenced_locally
-    if (typeof url !== 'string') {
-        // svelte-ignore state_referenced_locally
-        url = url();
+    const ICON_PX = 20;
+
+    const getUrl = () => {
+        if (typeof url === 'string') {
+            return url;
+        } else {
+            url();
+        }
     }
 </script>
 
-<div class="w-full h-20 flex justify-between items-center outline-label rounded-4xl button-general outline-1 -outline-offset-5">
-    <a title={serviceName} href={`${urlPrefix ?? ""}${url}`} target="_blank" class="w-full h-full flex justify-start items-center cursor-pointer">
+<div class="m-1 w-22 h-22 md:w-27 md:h-27 flex justify-between items-center outline-label rounded-2xl shadow-black shadow-lg/50 outline-1 -outline-offset-5">
+    <a title={serviceName} href={`${urlPrefix ?? ""}${getUrl()}`} target="_blank" class="relative pt-2 w-full h-full flex flex-col justify-center items-center gap-2 cursor-pointer">
+        <CopyButton text={url} onclick={(e) => e.preventDefault()} class="z-10 -m-3 absolute bottom-0 right-0 bg-base" />
         {#if icon}
-            <SvgIcon Svg={icon} size={35} class="ml-5 m-3 text-label" />
+            <SvgIcon Svg={icon} size={ICON_PX} class="text-label md:w-9 md:h-9" />
         {:else if icons?.light}
             {#if icons.dark}
-                <Icon lightSrc={icons.light} darkSrc={icons.dark} size={35} alt={serviceName} class="ml-5 m-3 pointer-events-none" />
+                <!-- メンテナンス性が最悪なので修正を検討 -->
+                <Icon lightSrc={icons.light} darkSrc={icons.dark} size={ICON_PX} alt={serviceName} class="md:w-9 md:h-9 md:translate-3 md:scale-150 pointer-events-none" />
             {:else}
-                <img src={icons.light} width={35} height={35} alt={serviceName} class="ml-5 m-3 pointer-events-none">
+                <img src={icons.light} width={ICON_PX} height={ICON_PX} alt={serviceName} class="md:w-9 md:h-9 pointer-events-none">
             {/if}
         {/if}
 
-        <div class="flex-1 flex-col-center gap-1 text-nowrap">
-            <p class="text-lg">{serviceName}</p>
-            <p class="text-xs">{userName}</p>
-        </div>
-    </a>
+        <p class="text-[10px] md:text-xs">{serviceName}</p>
+        <p class={["-mt-2 md:-mt-3 text-[8px] md:text-[10px]", (userName === "") && "invisible"]}>{(userName === "") ? "N/A" : userName}</p>
 
-    <CopyButton text={url} class="mr-3" />
+        <!-- <div class="flex-1 flex-col-center gap-1 text-nowrap">
+            <p class="text-sm">{serviceName}</p>
+            <p class="text-[10px]">{userName}</p>
+        </div> -->
+    </a>
 </div>

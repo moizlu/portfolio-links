@@ -3,9 +3,9 @@
 
 /* @custom-variant dark (&:where(.dark, .dark *)); */
 
-html {
+/* html {
     scrollbar-gutter: stable;
-}
+} */
 
 @theme {
     --breakpoint-xs: 500px;

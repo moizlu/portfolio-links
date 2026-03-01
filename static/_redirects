@@ -10,6 +10,8 @@
 /x              https://x.com/moizlu/                                    302
 /x/*            https://x.com/moizlu/:splat                              302
 
+/x-dm           https://x.com/messages/compose?recipient_id=1789129825762086912 302
+
 /twitter        https://x.com/moizlu/                                    302
 /twitter/*      https://x.com/moizlu/:splat                              302
 

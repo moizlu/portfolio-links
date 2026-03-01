@@ -6,14 +6,16 @@
     import SvgIcon from "../SvgIcon";
 
     interface Props extends HTMLButtonAttributes {
-        text: string;
+        text: string | (() => string);
     }
-    const { text, class: className, ...props }: Props = $props();
+    const { text, class: className, onclick: parentOnclick, ...props }: Props = $props();
 
     let isCopied = $state(false);
 
-    const onclick = () => {
-        window.navigator.clipboard.writeText(text);
+    const onclick = (e: MouseEvent & { currentTarget: EventTarget & HTMLButtonElement; }) => {
+        parentOnclick?.(e);
+
+        window.navigator.clipboard.writeText((typeof text === 'string') ? text : text());
 
         isCopied = true;
         setTimeout(() => {
@@ -22,9 +24,9 @@
     }
 </script>
 
-<button title="copy" {onclick} {...props} class={[className, "overflow-clip w-13 h-13 rounded-full button-general button-bg-default flex-center"]}>
-    <div class={["transition-all duration-600 flex-center gap-4", (isCopied) ? "-translate-x-6" : "translate-x-6"]}>
-        <SvgIcon Svg={CopyIcon} size={30} class=" w-8 h-8" />
-        <SvgIcon Svg={CheckIcon} size={30} class="w-8 h-8" />
+<button title="copy" {onclick} {...props} class={[className, "overflow-clip w-10 h-10 rounded-full button-general button-bg-default flex-center"]}>
+    <div class={["transition-all duration-600 flex-center gap-3", (isCopied) ? "-translate-x-4.5" : "translate-x-4.5"]}>
+        <SvgIcon Svg={CopyIcon} size={30} class="w-6 h-6" />
+        <SvgIcon Svg={CheckIcon} size={30} class="w-6 h-6" />
     </div>
 </button>

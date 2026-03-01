@@ -22,7 +22,7 @@
 	<meta property="og:description" content="リンク集 | moizlu" />
 
 	{#if typeof window !== 'undefined' && window.location.pathname !== '/'}
-	    <meta name="robots" content="noindex" />
+		<meta name="robots" content="noindex" />
   	{/if}
 
 	{#if dev}
