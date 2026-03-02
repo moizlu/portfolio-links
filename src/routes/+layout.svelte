@@ -36,6 +36,11 @@
 <DialogEntrypoint />
 <ToastEntryPoint />
 
-<div class="w-full h-full">
-	{@render children()}
+<div class="w-full min-h-dvh flex flex-col justify-center">
+	<div class="flex-1">
+		{@render children()}
+	</div>
+	<footer>
+		<p class="m-4 text-center">&copy; 2026 もいずる</p>
+	</footer>
 </div>
