@@ -39,7 +39,7 @@
 <div class="z-100 w-full h-30 sticky top-0 left-0 flex justify-end items-center pointer-events-none cursor-pointer">
         {#if dialog.isOpened}
             <button title="close" onclick={() => dialog.deactivate()} class="pointer-events-auto cursor-pointer">
-                <SvgIcon Svg={CloseIcon} size={100} class="text-label m-2 drop-shadow-base drop-shadow-sm/100 translate-x-3" />
+                <SvgIcon Svg={CloseIcon} size={100} class="text-label drop-shadow-base drop-shadow-sm/100 translate-x-7" />
             </button>
         {:else}
             <button title="share" {onclick} class="pointer-events-auto cursor-pointer">
