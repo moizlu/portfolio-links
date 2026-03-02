@@ -4,8 +4,8 @@
     import Body from "$lib/components/sections/Body";
 </script>
 
-<main class="w-full min-h-dvh h-full flex-col-center">
-    <div class="p-5 py-10 w-full max-w-200 relative flex-col-center gap-6">
+<main class="p-5 pt-5 pb-30 w-full min-h-dvh h-full flex-col-center">
+    <div class="w-full max-w-200 relative flex-col-center gap-6">
         <ShareButton />
         <Profile />
         <Body />
