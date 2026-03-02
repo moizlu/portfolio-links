@@ -37,7 +37,7 @@
 <ToastEntryPoint />
 
 <div class="w-full min-h-dvh flex flex-col justify-center">
-	<div class="flex-1">
+	<div class="flex-1 flex-center">
 		{@render children()}
 	</div>
 	<footer>
