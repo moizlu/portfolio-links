@@ -5,7 +5,7 @@
 </script>
 
 <div class="-mt-20 flex-col-center gap-2">
-    <div class="p-3 w-full flex-center gap-2 rounded-2xl shadow-black shadow-sm/75 bg-label/3 border-label/5 border-2">
+    <div class="p-3 w-full flex-center gap-2 rounded-2xl border-label border">
         <img src={favicon} alt="logo" width={80} height={80} class="pointer-events-none drop-shadow-black drop-shadow-lg/50">
         <div class="w-fit flex-col-center gap-2">
             <!-- <div class="w-full flex-center sm:gap-2">
