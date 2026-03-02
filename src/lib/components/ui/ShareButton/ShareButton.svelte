@@ -43,7 +43,7 @@
             </button>
         {:else}
             <button title="share" {onclick} class="pointer-events-auto cursor-pointer">
-                <SvgIcon Svg={ShareIcon} size={50} class="text-label m-2 drop-shadow-base drop-shadow-sm/100" />
+                <SvgIcon Svg={ShareIcon} size={50} class="text-label -mr-5 drop-shadow-base drop-shadow-sm/100" />
             </button>
         {/if}
 </div>
