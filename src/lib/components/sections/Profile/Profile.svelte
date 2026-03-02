@@ -6,7 +6,7 @@
 
 <div class="-mt-20 flex-col-center gap-2">
     <div class="p-3 w-full flex-center gap-2 rounded-2xl border-label border">
-        <img src={favicon} alt="logo" width={80} height={80} class="pointer-events-none drop-shadow-black drop-shadow-lg/50">
+        <img src={favicon} alt="logo" width={80} height={80} class="w-20 h-20 pointer-events-none drop-shadow-black drop-shadow-lg/50">
         <div class="w-fit flex-col-center gap-2">
             <!-- <div class="w-full flex-center sm:gap-2">
                 <h2 class="text-lg sm:text-3xl flex-1 text-center">もいずる</h2>
