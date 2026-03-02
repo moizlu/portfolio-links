@@ -4,18 +4,25 @@
     import CopyButton from "$lib/components/ui/CopyButton";
 </script>
 
-<div class="-mt-15 m-4 w-full flex-col-center gap-2">
-    <img src={favicon} alt="logo" width={100} height={100} class="pointer-events-none drop-shadow-black drop-shadow-lg/50">
-    <div class="w-75 sm:w-80 px-6 flex-col-center gap-2">
-        <div class="w-full flex-center">
-            <h2 class="flex-1 ml-5 text-center">もいずる</h2>
-            <CopyButton text="もいずる" class="mr-2 -ml-6" />
-        </div>
-        <div class="w-full flex-center">
-            <h3 class="flex-1 ml-5 text-center">moizlu</h3>
-            <CopyButton text="moizlu" class="mr-2 -ml-6" />
+<div class="-mt-20 flex-col-center gap-2">
+    <div class="p-3 w-full flex-center gap-2 rounded-2xl shadow-black shadow-sm/75 bg-label/3 border-label/5 border-2">
+        <img src={favicon} alt="logo" width={80} height={80} class="pointer-events-none drop-shadow-black drop-shadow-lg/50">
+        <div class="w-fit flex-col-center gap-2">
+            <!-- <div class="w-full flex-center sm:gap-2">
+                <h2 class="text-lg sm:text-3xl flex-1 text-center">もいずる</h2>
+                <CopyButton text="もいずる" class="scale-75 sm:scale-100" />
+            </div> -->
+            <h2 class="text-4xl flex-1 text-center">もいずる</h2>
+            <h3 class="text-3xl flex-1 text-center">moizlu</h3>
+            <!-- <div class="w-full flex-center sm:gap-2">
+                <h3 class="text-sm sm:text-2xl flex-1 text-center">moizlu</h3>
+                <CopyButton text="moizlu" class="scale-75 sm:scale-100" />
+            </div> -->
         </div>
     </div>
 
-    <p class="text-sm md:text-lg">Webとマイコン開発が好きなプログラマー。</p>
+    <p class="text-xl">専門学生 / Web開発者</p>
+    <p class="text-xs">SvelteKit, Tailwind CSS, Arduino, Blender...</p>
+
+    <p class="mt-2 text-xs md:text-sm text-center">Webとマイコン開発が好きなプログラマー。<br>3DCGにも手を出したいと考えている。</p>
 </div>
