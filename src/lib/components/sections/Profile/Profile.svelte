@@ -4,7 +4,7 @@
     import CopyButton from "$lib/components/ui/CopyButton";
 </script>
 
-<div class="-mt-20 flex-col-center gap-2">
+<div class="flex-col-center gap-2">
     <div class="p-3 w-full flex-center gap-2 rounded-2xl border-label border">
         <img src={favicon} alt="logo" width={80} height={80} class="w-20 h-20 pointer-events-none drop-shadow-black drop-shadow-lg/50">
         <div class="w-fit flex-col-center gap-2">
