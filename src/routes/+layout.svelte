@@ -37,7 +37,7 @@
 <ToastEntryPoint />
 
 <div class="main-content w-full h-fit">
-	<div class="w-full min-h-dvh flex flex-col justify-center bg-base/30">
+	<div class="w-full min-h-dvh flex flex-col justify-center bg-base-dark/30">
 		<div class="flex-1 flex-center">
 			{@render children()}
 		</div>

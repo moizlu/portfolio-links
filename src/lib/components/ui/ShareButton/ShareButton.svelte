@@ -36,14 +36,16 @@
     </div>
 {/snippet}
 
-<div class="z-100 w-full fixed top-5 right-10 flex justify-end items-center pointer-events-none cursor-pointer">
+<div class="z-100 w-full fixed top-5 right-0 xs:right-10 flex justify-end items-center pointer-events-none cursor-pointer">
+    <div class="p-1 bg-base/50 rounded-2xl backdrop-blur-sm">
         {#if dialog.isOpened}
             <button title="close" onclick={() => dialog.deactivate()} class="pointer-events-auto cursor-pointer">
-                <SvgIcon Svg={CloseIcon} size={100} class="text-label drop-shadow-base drop-shadow-sm/100 translate-x-7" />
+                <SvgIcon Svg={CloseIcon} size={100} class="text-label" />
             </button>
         {:else}
             <button title="share" {onclick} class="pointer-events-auto cursor-pointer">
-                <SvgIcon Svg={ShareIcon} size={50} class="text-label -mr-5 drop-shadow-base drop-shadow-sm/100" />
+                <SvgIcon Svg={ShareIcon} size={50} class="text-label" />
             </button>
         {/if}
+    </div>
 </div>
