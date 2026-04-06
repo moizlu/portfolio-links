@@ -41,9 +41,9 @@
 		<div class="flex-1 flex-center">
 			{@render children()}
 		</div>
-		<footer>
+		<!-- <footer>
 			<p class="m-4 text-center">&copy; 2026 もいずる</p>
-		</footer>
+		</footer> -->
 	</div>
 </div>
 
