@@ -36,7 +36,7 @@
     </div>
 {/snippet}
 
-<div class="z-100 w-full sticky top-0 left-0 flex justify-end items-center pointer-events-none cursor-pointer">
+<div class="z-100 w-full fixed top-5 right-10 flex justify-end items-center pointer-events-none cursor-pointer">
         {#if dialog.isOpened}
             <button title="close" onclick={() => dialog.deactivate()} class="pointer-events-auto cursor-pointer">
                 <SvgIcon Svg={CloseIcon} size={100} class="text-label drop-shadow-base drop-shadow-sm/100 translate-x-7" />
