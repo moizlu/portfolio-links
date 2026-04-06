@@ -7,7 +7,7 @@
 <main class="p-5 w-full h-full flex-col-center">
     <div class="w-full max-w-200 relative">
         <ShareButton />
-        <div class="w-full py-5 flex-col-center gap-6 bg-base/50 rounded-4xl border-label border shadow-black shadow-lg/50">
+        <div class="w-full py-5 flex-col-center gap-6 bg-base/70 dark:bg-base/50 rounded-4xl border-label border shadow-black shadow-lg/50">
             <Profile />
             <Body />
 
