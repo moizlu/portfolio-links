@@ -4,7 +4,7 @@
     import Icon from "../Icon";
     import CopyButton from "../CopyButton";
 
-    interface Props extends LinkItemProps {}
+    type Props = LinkItemProps;
     let { icon, icons, serviceName, userName, url, urlPrefix }: Props = $props();
 
     const ICON_PX = 30;
@@ -49,9 +49,10 @@
     </div> -->
 {/snippet}
 
-<div class="m-1 w-20 h-20 md:w-24 md:h-24 mt-4 mr-4 flex justify-between items-center outline-label rounded-2xl shadow-black shadow-md/50 bg-label/2 border-label border">
+<div class="m-1 w-20 h-20 md:w-24 md:h-24 mt-4 mr-4 flex justify-between items-center outline-label rounded-2xl shadow-black shadow-md/50 bg-label/2 border-label border backdrop-blur-sm">
     {#if typeof url === 'string'}
-        <a title={serviceName} href={`${urlPrefix ?? ""}${getUrl()}`} target="_blank" class="relative pt-2 w-full h-full flex flex-col justify-center items-center gap-2 cursor-pointer">
+         <!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
+        <a title={serviceName} href={(`${urlPrefix ?? ""}${getUrl()}`)} target="_blank" class="relative pt-2 w-full h-full flex flex-col justify-center items-center gap-2 cursor-pointer">
             {@render content()}
         </a>
     {:else}

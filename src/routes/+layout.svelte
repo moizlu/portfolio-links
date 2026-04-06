@@ -36,11 +36,21 @@
 <DialogEntrypoint />
 <ToastEntryPoint />
 
-<div class="w-full min-h-dvh flex flex-col justify-center">
-	<div class="flex-1 flex-center">
-		{@render children()}
+<div class="main-content w-full h-fit">
+	<div class="w-full min-h-dvh flex flex-col justify-center bg-base/30">
+		<div class="flex-1 flex-center">
+			{@render children()}
+		</div>
+		<footer>
+			<p class="m-4 text-center">&copy; 2026 もいずる</p>
+		</footer>
 	</div>
-	<footer>
-		<p class="m-4 text-center">&copy; 2026 もいずる</p>
-	</footer>
 </div>
+
+<style>
+    .main-content {
+        background-image: url('/images/background.webp');
+		background-size: cover;
+		background-position: center;
+    }
+</style>
