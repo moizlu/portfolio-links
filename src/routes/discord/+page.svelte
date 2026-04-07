@@ -38,7 +38,7 @@
         </button>
 
         <!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
-        <a target="_blank" href="/discord-profile" class="flex-center button-default">
+        <a target="_blank" href="https://moiz.lu/discord-profile" class="flex-center button-default">
             <p>プロフィールリンク</p>
             <SvgIcon Svg={JumpIcon} size={30} class="w-10 h-10 p-2" />
         </a>
