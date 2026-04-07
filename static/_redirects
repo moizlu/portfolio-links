@@ -32,5 +32,5 @@
 /github         https://github.com/moizlu/                               302
 /github/*       https://github.com/moizlu/:splat                         302
 
-/discord        https://discord.com/users/607472928669302784/            302
-/discord/*      https://discord.com/users/607472928669302784/:splat      302
+/discord-profile        https://discord.com/users/607472928669302784/            302
+/discord-profile/*      https://discord.com/users/607472928669302784/:splat      302
