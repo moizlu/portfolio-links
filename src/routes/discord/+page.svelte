@@ -14,6 +14,7 @@
     let isCopied = $state(false);
 
     const onUserNameCopyClick = () => {
+        navigator.clipboard.writeText("moizlu");
         isCopied = true;
         setTimeout(() => {
             isCopied = false;
