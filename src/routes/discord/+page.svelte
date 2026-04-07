@@ -1,6 +1,6 @@
 <script lang="ts">
-    import DiscordLightIcon from "$lib/assets/icons/light/discord-full.svg";
-    import DiscordDarkIcon from "$lib/assets/icons/dark/discord-full.svg";
+    import DiscordLightIcon from "$lib/assets/icons/light/discord.svg";
+    import DiscordDarkIcon from "$lib/assets/icons/dark/discord.svg";
 
     import CopyIcon from "$lib/assets/icons/copy.svelte";
     import CheckIcon from "$lib/assets/icons/check.svelte";
@@ -25,7 +25,11 @@
 <main class="p-5 w-full max-w-200 h-full flex-col-center">
     <div class="w-full py-5 flex-col-center gap-2 bg-base/60 dark:bg-base/50 rounded-4xl border-label border shadow-black shadow-lg/50">
         <div class="w-full flex-col-center gap-0">
-            <Icon lightSrc={DiscordLightIcon} darkSrc={DiscordDarkIcon} size={200} class="h-7" />
+            <!-- 文字付きのSVGファイルだと微妙に重いため -->
+            <div class="flex-center gap-5">
+                <Icon lightSrc={DiscordLightIcon} darkSrc={DiscordDarkIcon} size={40} class="h-8" />
+                <p class="text-2xl font-bold">Discord</p>
+            </div>
             <p>moizlu</p>
         </div>
         <button onclick={onUserNameCopyClick} class="flex-center button-default cursor-pointer">
