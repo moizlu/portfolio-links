@@ -27,7 +27,7 @@
         <div class="w-full flex-col-center gap-0">
             <!-- 文字付きのSVGファイルだと微妙に重いため -->
             <div class="flex-center gap-5">
-                <Icon lightSrc={DiscordLightIcon} darkSrc={DiscordDarkIcon} size={40} class="h-8" />
+                <Icon lightSrc={DiscordLightIcon} darkSrc={DiscordDarkIcon} size={40} class="h-7" />
                 <p class="text-2xl font-bold">Discord</p>
             </div>
             <p>moizlu</p>
