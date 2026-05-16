@@ -1,10 +1,6 @@
-<script lang="ts">
-    import favicon from "$lib/assets/favicon.svg";
-</script>
-
 <div class="w-full flex-col-center gap-2 px-3">
     <div class="w-full max-w-70 mx-10 p-3 flex justify-start items-center gap-2 border rounded-2xl bg-label/2 backdrop-blur-lg">
-        <img src={favicon} alt="logo" width={80} height={80} class="w-20 h-20 pointer-events-none drop-shadow-black drop-shadow-lg/50">
+        <img src="/logo.svg" alt="logo" width={80} height={80} class="w-20 h-20 pointer-events-none drop-shadow-black drop-shadow-lg/50">
         <div class="w-fit flex-1 flex-col-center gap-2">
             <!-- <div class="w-full flex-center sm:gap-2">
                 <h2 class="text-lg sm:text-3xl flex-1 text-center">もいずる</h2>
