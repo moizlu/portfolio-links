@@ -1,26 +1,20 @@
 <script lang="ts">
     import LoadingIcon from "$lib/assets/icons/loading.svelte";
 
+    import { fade } from "svelte/transition";
+
     import { onMount } from "svelte";
 
     import SvgIcon from "$lib/components/ui/SvgIcon";
     import { splashState } from "$lib/state";
 
-    let isInitialized = $state(false);
-
     onMount(() => {
-        setTimeout(() => {
-            isInitialized = true;
-
-            setTimeout(() => {
-                splashState.isAppear = false
-            }, 500);
-        }, 500);
+        splashState.isAppear = false
     });
 </script>
 
 {#if splashState.isAppear}
-    <div class={["transition-all duration-500 z-1000 splash-clip fixed top-0 left-0 w-full h-full bg-label flex-col-center", (isInitialized) ? "clip-hole" : "overflow-hidden"]}>
+    <div transition:fade={{ duration: 200 }} class="transition-all duration-500 z-1000 splash-clip fixed top-0 left-0 w-full h-full bg-label flex-col-center">
         <SvgIcon Svg={LoadingIcon} size={100} class="text-base animate-spin" />
         <p class="text-base text-xl">読み込み中......</p>
     </div>
