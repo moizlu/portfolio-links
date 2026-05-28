@@ -11,13 +11,18 @@
     import Icon from "../Icon";
 
     const onclick = () => {
-        dialog.activate({
-            id: "share",
-            content: shareDialog,
-            isModal: false,
-            isDrawWindow: true,
-            requireContrast: true
-        })
+
+        if (navigator.share) {
+            navigator.share({ title: "もいずる", url: "https://moiz.lu/" });
+        } else {
+            dialog.activate({
+                id: "share",
+                content: shareDialog,
+                isModal: false,
+                isDrawWindow: true,
+                requireContrast: true
+            });
+        }
     }
 </script>
 
