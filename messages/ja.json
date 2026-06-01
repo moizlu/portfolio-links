@@ -1,0 +1,17 @@
+{
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"hello_world": "Hello, {name} from ja!",
+	"links": "リンク集",
+	"brief_intro": "専門学生 / Web開発",
+	"theme_switch": "テーマ切り替え",
+	"switch_language": "言語切り替え",
+	"copy_name": "{name}をコピー",
+	"web_tool": "Webツール",
+	"moizlu": "もいずる",
+	"close": "閉じる",
+	"share": "共有",
+	"share_this_page": "このページを共有",
+	"return_to_home": "ホームに戻る",
+	"link_to_profile": "プロフィールリンク",
+	"copy_user_name": "ユーザー名をコピー"
+}

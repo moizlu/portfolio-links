@@ -1,64 +1,64 @@
 <script lang="ts">
-    import DiscordLightIcon from "$lib/assets/icons/light/discord.svg";
-    import DiscordDarkIcon from "$lib/assets/icons/dark/discord.svg";
-
-    import CopyIcon from "$lib/assets/icons/copy.svelte";
-    import CheckIcon from "$lib/assets/icons/check.svelte";
-    import JumpIcon from "$lib/assets/icons/jump.svelte";
+    import DiscordLight from "$lib/assets/icons/light/discord.svg";
+    import DiscordDark from "$lib/assets/icons/dark/discord.svg";
     import HomeIcon from "$lib/assets/icons/home.svelte";
 
-    import SvgIcon from "$lib/components/ui/SvgIcon";
-    import Icon from "$lib/components/ui/Icon";
     import { resolve } from "$app/paths";
+    import { m } from "$lib/paraglide/messages";
 
-    let isCopied = $state(false);
+    import Header from "$lib/components/sections/Header";
+    import Icon from "$lib/components/ui/Icon";
+    import CopyIcon from "$lib/components/ui/CopyIcon";
+    import SvgIcon from "$lib/components/ui/SvgIcon";
 
-    const onUserNameCopyClick = () => {
+    let copied = $state(false);
+
+    const onCopyButtonClicked = () => {
         navigator.clipboard.writeText("moizlu");
-        isCopied = true;
+        copied = true;
         setTimeout(() => {
-            isCopied = false;
+            copied = false;
         }, 3000);
     }
 </script>
 
-<main class="p-5 w-full max-w-200 h-full flex-col-center">
-    <div class="w-full py-5 flex-col-center gap-2 bg-base/60 dark:bg-base/50 rounded-4xl border-label border shadow-black shadow-lg/50">
-        <div class="w-full flex-col-center gap-0">
-            <!-- 文字付きのSVGファイルだと微妙に重いため -->
-            <div class="flex-center gap-5">
-                <Icon lightSrc={DiscordLightIcon} darkSrc={DiscordDarkIcon} size={40} class="h-7" />
-                <p class="text-2xl font-bold">Discord</p>
-            </div>
-            <p>moizlu</p>
-        </div>
-        <button onclick={onUserNameCopyClick} class="flex-center button-default cursor-pointer">
-            <p>ユーザー名をコピー</p>
-            <div class="w-10 h-10 flex-center overflow-clip">
-                <div class={["transition-all duration-600 flex-center gap-3", (isCopied) ? "-translate-x-4.5" : "translate-x-4.5"]}>
-                    <SvgIcon Svg={CopyIcon} size={30} class="w-6 h-6" />
-                    <SvgIcon Svg={CheckIcon} size={30} class="w-6 h-6" />
+<svelte:head>
+    <title>{m.links()} | moizlu</title>
+</svelte:head>
+
+<main class="w-full h-full pt-15 px-4 min-h-dvh flex flex-col justify-center items-center
+before:transition-all before:duration-300 before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[url(/images/room2.webp)] before:bg-cover before:bg-center before:brightness-170 dark:before:brightness-50 before:bg-fixed before:-z-1">
+        <Header />
+
+        <div class="p-4 w-full max-w-100 bg-base/70 rounded-xl border-label/20 border-2 flex flex-col justify-center items-center gap-5">
+            <div class="flex flex-col justify-center items-center gap-2">
+                <div class="flex justify-center items-center gap-5">
+                    <Icon lightSrc={DiscordLight} darkSrc={DiscordDark} size={40} />
+                    <p class="text-xl font-bold">Discord</p>
                 </div>
+                <p>moizlu</p>
             </div>
-        </button>
 
-        <!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
-        <a target="_blank" href="https://moiz.lu/discord-profile" class="flex-center button-default">
-            <p>プロフィールリンク</p>
-            <SvgIcon Svg={JumpIcon} size={30} class="w-10 h-10 p-2" />
-        </a>
+            <a target="_blank" title={m.link_to_profile()} href="https://moiz.lu/discord-profile" class="button flex justify-between items-center">
+                <p>{m.link_to_profile()}</p>
+                <p class="mr-1">↗</p>
+            </a>
+            <button onclick={onCopyButtonClicked} class="button flex justify-between items-center cursor-pointer">
+                <p>{m.copy_user_name()}</p>
+                <CopyIcon bind:copied={copied} class="scale-50 -m-2" />
+            </button>
 
-        <a href={resolve("/")} class="button-default flex-center">
-            <SvgIcon Svg={HomeIcon} size={30} class="w-10 h-10 pr-2" />
-            <p>ホームに戻る</p>
-        </a>
-    </div>
+            <a href={resolve("/")} title={m.return_to_home()} class="button mt-5 flex justify-between items-center">
+                <SvgIcon Svg={HomeIcon} size={30} class="stroke-label stroke-30 fill-transparent" />
+                <p>{m.return_to_home()}</p>
+            </a>
+        </div>
 </main>
 
 <style>
     @reference "../layout.css";
 
-    .button-default {
-        @apply transition-all duration-300 rounded-xl p-2 hover:bg-label/3 active:bg-label/10 shadow-black shadow-md/100 hover:shadow-md/50 active:shadow-sm/5 cursor-pointer disabled:cursor-not-allowed disabled:bg-disabled disabled:shadow-sm/10 backdrop-blur-sm;
+    .button {
+        @apply w-46 h-10 transition-all duration-300 p-2 bg-label/5 rounded-lg shadow-black shadow-lg/50 hover:shadow-none;
     }
 </style>

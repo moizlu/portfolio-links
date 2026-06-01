@@ -1,0 +1,17 @@
+{
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"hello_world": "Hello, {name} from en!",
+	"links": "Links",
+	"brief_intro": "Vocational school Student / WebDevelopment",
+	"theme_switch": "Switch theme.",
+	"switch_language": "Switch language.",
+	"copy_name": "Copy {name}",
+	"web_tool": "Web Tools",
+	"moizlu": "moizlu",
+	"close": "Close",
+	"share": "Share",
+	"share_this_page": "Share this page",
+	"return_to_home": "Return to home",
+	"link_to_profile": "Link to profile",
+	"copy_user_name": "Copy user name"
+}

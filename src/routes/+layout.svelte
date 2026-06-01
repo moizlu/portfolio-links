@@ -1,14 +1,27 @@
 <script lang="ts">
+	import type { Pathname } from '$app/types';
+	import { resolve } from '$app/paths';
+	import { page } from '$app/state';
+	import { locales, localizeHref } from '$lib/paraglide/runtime';
+	import { getLocale } from '$lib/paraglide/runtime';
+
 	import './layout.css';
 	import favicon from '$lib/assets/favicon.svg';
 
-	import { dev } from '$app/environment';
+	import { theme } from '$lib/store/theme.svelte';
+	// eslint-disable-next-line @typescript-eslint/no-unused-expressions
+	theme
 
+	import ModalWindowEntrypoint from '$lib/components/ui/ModalWindow';
+	import ToastEntryPoint from '$lib/components/ui/Toast/ToastEntryPoint.svelte';
 	import SplashScreen from '$lib/components/sections/SplashScreen';
-	import { DialogEntrypoint } from '$lib/components/ui/Dialog';
-	import { ToastEntryPoint } from '$lib/components/ui/Toast';
 
 	let { children } = $props();
+
+	$effect(() => {
+		const lang = getLocale();
+		document.documentElement.lang = lang
+	});
 </script>
 
 <svelte:head>
@@ -16,41 +29,35 @@
 
 	<meta property="og:url" content="https://moiz.lu/" />
 	<meta property="og:type" content="profile" />
-	<meta property="og:title" content="リンク集 | moizlu" />
+	<meta property="og:title" content="リンク集(Links) | moizlu" />
 	<meta property="og:image" content="https://moiz.lu/ogp.png" />
-	<meta property="og:site_name" content="リンク集 | moizlu" />
-	<meta property="og:description" content="リンク集 | moizlu" />
+	<meta property="og:site_name" content="リンク集(Links) | moizlu" />
+	<meta property="og:description" content="リンク集(Links) | moizlu" />
 
 	{#if typeof window !== 'undefined' && window.location.pathname !== '/'}
 		<meta name="robots" content="noindex" />
   	{/if}
 
-	{#if dev}
-		<title>[開発鯖]もいずる | moizlu</title>
-	{:else}
-		<title>もいずる | moizlu</title>
-	{/if}
+	<meta http-equiv="content-security-policy" content="
+		default-src 'self';
+		script-src 'self' https://challenges.cloudflare.com https://static.cloudflareinsights.com 'unsafe-inline';
+		style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
+		font-src 'self' https://fonts.gstatic.com;
+		frame-src 'self' https://challenges.cloudflare.com;
+		img-src 'self' data: https:;
+	">
 </svelte:head>
 
-<SplashScreen />
-<DialogEntrypoint />
+<ModalWindowEntrypoint />
 <ToastEntryPoint />
+<SplashScreen />
 
-<div class="main-content w-full h-fit">
-	<div class="w-full min-h-dvh flex flex-col justify-center">
-		<div class="flex-1 flex-center">
-			{@render children()}
-		</div>
-		<!-- <footer>
-			<p class="m-4 text-center">&copy; 2026 もいずる</p>
-		</footer> -->
-	</div>
+{@render children()}
+
+<div style="display:none">
+	{#each locales as locale (locale)}
+		<a
+			href={resolve(localizeHref(page.url.pathname, { locale }) as Pathname)}
+		>{locale}</a>
+	{/each}
 </div>
-
-<style>
-    .main-content {
-        background-image: url('/images/background.webp');
-		background-size: cover;
-		background-position: center;
-    }
-</style>

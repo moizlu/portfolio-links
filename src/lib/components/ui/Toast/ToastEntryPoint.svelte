@@ -3,7 +3,7 @@
     import CloseIcon from "$lib/assets/icons/close.svelte";
 
     import { slide } from "svelte/transition";
-    import { toast } from "./state.svelte";
+    import { toast } from "$lib/store/toast.store.svelte";
 
     import SvgIcon from "../SvgIcon";
 </script>

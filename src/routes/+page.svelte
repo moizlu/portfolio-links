@@ -1,19 +1,25 @@
 <script lang="ts">
-    import ShareButton from "$lib/components/ui/ShareButton";
-    import Profile from "$lib/components/sections/Profile";
-    import Body from "$lib/components/sections/Body";
+    import { m } from "$lib/paraglide/messages";
+
+    import Header from "$lib/components/sections/Header";
+    import Introduction from "$lib/components/sections/Introduction";
+    import PrimaryLinks from "$lib/components/sections/PrimaryLinks";
+    import SecondaryLinks from "$lib/components/sections/SecondaryLinks";
+    import Footer from "$lib/components/sections/Footer";
 </script>
 
-<main class="p-5 w-full h-full flex-col-center">
-    <div class="w-full max-w-200 relative">
-        <ShareButton />
-        <div class="w-full py-5 flex-col-center gap-6 bg-base/60 dark:bg-base/50 rounded-4xl border-label border shadow-black shadow-lg/50">
-            <Profile />
-            <Body />
+<svelte:head>
+    <title>{m.links()} | moizlu</title>
+</svelte:head>
 
-		<footer>
-			<p class="m-4 text-center">&copy; 2026 もいずる</p>
-		</footer>
+<main class="w-full h-full pt-15 px-4 min-h-dvh flex flex-col justify-center items-center
+before:transition-all before:duration-300 before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[url(/images/room2.webp)] before:bg-cover before:bg-center before:brightness-170 dark:before:brightness-50 before:bg-fixed before:-z-1">
+        <Header />
+
+        <div class="p-4 w-full max-w-100 bg-base/70 rounded-xl border-label/20 border-2 flex flex-col justify-center items-center gap-5">
+            <Introduction />
+            <PrimaryLinks />
+            <SecondaryLinks />
+            <Footer />
         </div>
-    </div>
 </main>
