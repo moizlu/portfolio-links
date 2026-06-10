@@ -56,7 +56,7 @@ before:transition-all before:duration-300 before:content-[''] before:absolute be
 </main>
 
 <style>
-    @reference "../layout.css";
+    @reference "../../layout.css";
 
     .button {
         @apply w-46 h-10 transition-all duration-300 p-2 bg-label/5 rounded-lg shadow-black shadow-lg/50 hover:shadow-none;
