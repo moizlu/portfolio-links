@@ -36,6 +36,12 @@
     }
 </script>
 
+<noscript>
+    <h1 class="font-extrabold text-9xl">{page.status}</h1>
+    <h1 class="text-3xl md:text-5xl">{page.error?.message}</h1>
+    <a href={resolve("/")}>ホームに戻る</a>
+</noscript>
+
 {#if page.status !== 404}
     <main class="w-full h-full flex flex-col justify-center items-center
     before:transition-all before:duration-300 before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[url(/images/room2.webp)] before:bg-cover before:bg-center before:brightness-170 dark:before:brightness-50 before:bg-fixed before:-z-1">
