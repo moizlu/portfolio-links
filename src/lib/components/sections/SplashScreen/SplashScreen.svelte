@@ -32,8 +32,10 @@
             <SvgIcon Svg={WarningIcon} size={50} />
         </div>
 
-        <p>お使いのブラウザが表示に対応していない可能性があります。<br>再読込みしても改善しない場合、<a href={resolve("/legacy")} class="inline-link">/legacy</a>をご覧ください。</p>
-        <p>Your browser may not support this feature.<br>If refreshing the page does not resolve the issue, please visit <a href={resolve("/legacy")} class="inline-link">/legacy</a>.</p>
+        <!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
+        <p>お使いのブラウザが表示に対応していない可能性があります。<br>再読込みしても改善しない場合、<a href="/legacy.html" class="inline-link">/legacy</a>をご覧ください。</p>
+        <!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
+        <p>Your browser may not support this feature.<br>If refreshing the page does not resolve the issue, please visit <a href="/legacy.html" class="inline-link">/legacy</a>.</p>
         <p>主な原因</p>
         <ul class="list-disc">
             <li>インターネット接続の不備</li>
