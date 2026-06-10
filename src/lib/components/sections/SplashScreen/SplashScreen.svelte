@@ -3,6 +3,8 @@
 
     import WarningIcon from "$lib/assets/icons/warning.svelte";
 
+    import { resolve } from "$app/paths";
+
     import { splashStore } from "$lib/store";
 
     import SvgIcon from "$lib/components/ui/SvgIcon";
@@ -30,8 +32,23 @@
             <SvgIcon Svg={WarningIcon} size={50} />
         </div>
 
-        <p>読み込みに時間がかかっています。<br>インターネット接続を確認し、再読み込みしてみてください。</p>
-        <p>It's taking a while to load.<br>Please check your internet connection and try again.</p>
+        <p>お使いのブラウザが表示に対応していない可能性があります。<br>再読込みしても改善しない場合、<a href={resolve("/legacy")} class="inline-link">/legacy</a>をご覧ください。</p>
+        <p>Your browser may not support this feature.<br>If refreshing the page does not resolve the issue, please visit <a href={resolve("/legacy")} class="inline-link">/legacy</a>.</p>
+        <p>主な原因</p>
+        <ul class="list-disc">
+            <li>インターネット接続の不備</li>
+            <li>ブラウザのバージョンが古い</li>
+            <li>JavaScriptを無効にしている</li>
+        </ul>
+        <p>Main causes</p>
+        <ul class="list-disc">
+            <li>Internet connection issues</li>
+            <li>Outdated browser version</li>
+            <li>JavaScript is disabled</li>
+        </ul>
+
+        <!-- <p>読み込みに時間がかかっています。<br>インターネット接続を確認し、再読み込みしてみてください。</p>
+        <p>It's taking a while to load.<br>Please check your internet connection and try again.</p> -->
     </div>
 </div>
 
@@ -68,7 +85,7 @@
 
         .slow-loading-caution {
             @apply text-xs text-center;
-            animation: 200ms ease-in-out 5s 1 both slow-loading-caution;
+            animation: 200ms ease-in-out 3s 1 both slow-loading-caution;
         }
 
         .caution-icon {

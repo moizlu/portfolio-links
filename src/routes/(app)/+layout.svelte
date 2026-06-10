@@ -5,7 +5,7 @@
 	// import { locales, localizeHref } from '$lib/paraglide/runtime';
 	import { getLocale } from '$lib/paraglide/runtime';
 
-	import './layout.css';
+	import '../layout.css';
 	import favicon from '$lib/assets/favicon.svg';
 
 	import { theme } from '$lib/store/theme.svelte';
