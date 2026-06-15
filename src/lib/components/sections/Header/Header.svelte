@@ -3,14 +3,13 @@
     import ShareIcon from "$lib/assets/icons/share.svelte";
 
     import { page } from '$app/state';
-    import { resolve } from "$app/paths";
+    import { browser } from "$app/env";
+    import { goto } from "$app/navigation";
     import { getLocale } from "$lib/paraglide/runtime";
     // import { m } from "$lib/paraglide/messages";
     import { locales } from '$lib/paraglide/runtime';
 
     import SvgIcon from "$lib/components/ui/SvgIcon";
-  import { browser } from "$app/env";
-  import { goto } from "$app/navigation";
 
 	// import { page } from '$app/state';
 	// import { getLocale, locales } from '$lib/paraglide/runtime';
