@@ -44,7 +44,8 @@
 </script>
 
 <header>
-    <a title="Home" href={resolve("/")}>
+    <!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
+    <a title="Home" href={(getLocale() === "ja") ? "/" : "/en"}>
         <img src={avatar} alt="avatar" width={35} height={35}>
     </a>
 
