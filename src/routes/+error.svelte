@@ -25,6 +25,21 @@
         gap: 10px;
     }
 
+    h1 {
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    h2 {
+        font-size: 20px;
+        font-weight: 300;
+    }
+
+    h3 {
+        font-size: 15px;
+        font-weight: 700;
+    }
+
     h3 {
         width: 70%;
         height: 40px;
