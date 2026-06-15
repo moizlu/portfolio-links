@@ -1,14 +1,15 @@
 <script lang="ts">
     import { browser } from "$app/env";
     import { page } from "$app/state";
-    import { resolve } from "$app/paths";
+    import { getLocale } from "$lib/paraglide/runtime";
 </script>
 
 <main>
     <h1>{page.status}</h1>
         <h3>{#if browser}{window.location.pathname.slice(1)}{/if}</h3>
     <h2>{page.error?.message}</h2>
-    <a data-sveltekit-reload href={resolve("/")} class="return-button">ホームに戻る</a>
+    <!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
+    <a data-sveltekit-reload href={(getLocale() === "ja") ? "/" : "/en"} class="return-button">ホームに戻る</a>
 </main>
 
 <style>
