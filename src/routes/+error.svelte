@@ -8,7 +8,7 @@
     <h1>{page.status}</h1>
         <h3>{#if browser}{window.location.pathname.slice(1)}{/if}</h3>
     <h2>{page.error?.message}</h2>
-    <a href={resolve("/")} class="return-button">ホームに戻る</a>
+    <a data-sveltekit-reload href={resolve("/")} class="return-button">ホームに戻る</a>
 </main>
 
 <style>
