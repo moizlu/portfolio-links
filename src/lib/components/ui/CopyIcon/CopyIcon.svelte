@@ -9,12 +9,40 @@
     interface Props extends HTMLAttributes<HTMLDivElement> {
         copied: boolean;
     }
-    let { copied = $bindable(false), class: ClassName, ...props }: Props = $props();
+    let { copied = $bindable(false), class: className, ...props }: Props = $props();
 </script>
 
-<div {...props} class={[ClassName, "w-10 h-10 overflow-clip"]}>
-    <div class={["transition-all duration-600 w-max max-h-max flex justify-center items-center gap-2", (copied) && "-translate-x-13"]}>
-        <SvgIcon Svg={CopyIcon} size={500} class="w-10 h-10" />
-        <SvgIcon Svg={CheckIcon} size={500} class="w-10 h-10" />
+<div {...props} class="{className} wrapper">
+    <div class="container" class:copied={copied}>
+        <SvgIcon Svg={CopyIcon} size={500} class="copy-icon-icon" />
+        <SvgIcon Svg={CheckIcon} size={500} class="copy-icon-icon" />
     </div>
 </div>
+
+<style>
+    .wrapper {
+        width: 2.5rem;
+        height: 2.5rem;
+        overflow: clip;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        width: max-content;
+        max-height: max-content;
+        transition-property: all;
+        transition-duration: 600ms;
+    }
+
+    .container.copied {
+        transform: translateX(-3.25rem);
+    }
+
+    :global(.copy-icon-icon) {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+</style>

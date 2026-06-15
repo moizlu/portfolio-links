@@ -1,10 +1,6 @@
 {
-	"files.associations": {
-		"*.css": "tailwindcss"
-	},
-	"cSpell.words": [
-		"microcontroller",
-		"Noto",
-		"paraglide"
-	]
+    "cSpell.words": [
+        "oklch",
+        "paraglide"
+    ]
 }

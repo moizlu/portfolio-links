@@ -15,7 +15,7 @@ To recreate this project with the same configuration:
 
 ```sh
 # recreate this project
-pnpm dlx sv@0.15.3 create --template minimal --types ts --add eslint tailwindcss="plugins:typography,forms" sveltekit-adapter="adapter:static" paraglide="languageTags:en, ja+demo:no" --install pnpm moizlu-links
+pnpm dlx sv@0.16.1 create --template minimal --types ts --add eslint sveltekit-adapter="adapter:static" --install pnpm links
 ```
 
 ## Developing
