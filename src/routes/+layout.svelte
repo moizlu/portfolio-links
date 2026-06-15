@@ -48,6 +48,7 @@
 
 	<meta http-equiv="content-security-policy" content="
 		default-src 'self';
+		connect-src 'self' https://cloudflareinsights.com;
 		script-src 'self' https://challenges.cloudflare.com https://static.cloudflareinsights.com 'unsafe-inline';
 		style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
 		font-src 'self' https://fonts.gstatic.com;
